@@ -51,13 +51,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\bars.cs" />
+     <Compile Include="Assets\Scripts\Camera.cs" />
      <Compile Include="Assets\Scripts\Obstacle.cs" />
-     <Compile Include="Assets\Scripts\OLD\BarsManager.cs" />
-     <Compile Include="Assets\Scripts\OLD\Button.cs" />
-     <Compile Include="Assets\Scripts\OLD\Camera.cs" />
-     <Compile Include="Assets\Scripts\OLD\TextQuestions.cs" />
      <Compile Include="Assets\Scripts\Player.cs" />
      <Compile Include="Assets\Scripts\Spawner.cs" />
+ <Reference Include="Facebook.Unity.Settings">
+ <HintPath>C:/Users/timol/OneDrive/Documenten/GitHubResporities/StudentSim/Student sim/Library/FacebookSDK/Facebook.Unity.Settings.dll</HintPath>
+ </Reference>
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
@@ -148,6 +149,10 @@
  <Reference Include="UnityEngine.StandardEvents">
  <HintPath>C:/Users/timol/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.10/UnityEngine.StandardEvents.dll</HintPath>
  </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
+      <Project>{A43DB25D-DF9D-AC4A-A55B-3F52AF898D18}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
