@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class Spawner : MonoBehaviour {
 
-    public GameObject Obstacle;
+    public GameObject Obstacle, Floor, Hedge;
     public Player player;
+
+    private int FloorSpawnID;
 
 	// Use this for initialization
 	void Start () {
@@ -14,10 +16,18 @@ public class Spawner : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        if (player.transform.position.z > FloorSpawnID*10-100)
+        {
+            Instantiate(Floor, new Vector3(0, 0, FloorSpawnID * 10), transform.rotation);
+            Instantiate(Hedge, new Vector3(3, 2, FloorSpawnID * 10), transform.rotation);
+            Instantiate(Hedge, new Vector3(-3, 2, FloorSpawnID * 10), transform.rotation);
+            FloorSpawnID++;
+        }
+
 	}
 
     void SpawnObject()
     {
-        Instantiate(Obstacle, transform.position, transform.rotation);
+        Instantiate(Obstacle, new Vector3(transform.position.x,0,transform.position.z), transform.rotation);
     }
 }

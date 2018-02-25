@@ -15,11 +15,22 @@ public class Obstacle : MonoBehaviour {
         ChangeValue = Random.Range(-30,30);
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
         transform.position = new Vector3(Random.Range(-1,2),transform.position.y,transform.position.z);
+
+        Renderer renderer = GetComponent<Renderer>();
+        if (ID == 1)
+            renderer.material.color = Color.blue;
+        else if (ID == 2)
+            renderer.material.color = Color.red;
+        else if (ID == 3)
+            renderer.material.color = Color.green;
+
+        if (ChangeValue > 0)
+            transform.localScale = new Vector3(0.7f, 2, 0.7f);
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        transform.Translate(0,0,-0.5f);
+        //transform.Translate(0,0,-0.5f);
 
         if (transform.position.z < -10)
             Destroy(gameObject);
