@@ -9,6 +9,8 @@ public class Player : MonoBehaviour {
     [Range(0,25)]
     public int HorizontalSpeed;
     public int GameSpeed, GameRotation;
+    public float Study = 100, Social=100, Sleep=100;
+    public GameObject StudyBar, SocialBar, SleepBar;
 
     private bool OnFloor;
     private float MoveTime;
@@ -27,6 +29,7 @@ public class Player : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
+        BarsManager();
 
         transform.Translate(Vector3.forward * Time.deltaTime * GameSpeed);
 
@@ -112,4 +115,10 @@ public class Player : MonoBehaviour {
         return false;
     }
 
+    void BarsManager()
+    {
+        StudyBar.transform.localScale = new Vector3(Study,1,1);
+        SocialBar.transform.localScale = new Vector3(Social,1, 1);
+        SleepBar.transform.localScale = new Vector3(Sleep,1, 1);
+    }
 }

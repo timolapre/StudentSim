@@ -124,7 +124,7 @@ GameObject:
   - component: {fileID: 553185069}
   - component: {fileID: 553185068}
   m_Layer: 5
-  m_Name: TEXT1
+  m_Name: Social
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -145,8 +145,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -482, y: -301}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: -180, y: 108.6}
+  m_SizeDelta: {x: 92.77, y: 22.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &553185068
 MonoBehaviour:
@@ -169,16 +169,16 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 20
+    m_FontSize: 15
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 40
-    m_Alignment: 0
+    m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
+    m_HorizontalOverflow: 1
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: SOCIAL
 --- !u!222 &553185069
@@ -198,7 +198,7 @@ GameObject:
   - component: {fileID: 561978348}
   - component: {fileID: 561978347}
   m_Layer: 5
-  m_Name: Image (2)
+  m_Name: SleepBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -219,8 +219,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -350, y: -250}
-  m_SizeDelta: {x: 10, y: 70}
+  m_AnchoredPosition: {x: -180, y: 38.600006}
+  m_SizeDelta: {x: 1, y: 10}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &561978347
 MonoBehaviour:
@@ -358,6 +358,13 @@ MonoBehaviour:
   HorizontalSpeed: 10
   GameSpeed: 5
   GameRotation: 0
+  Study: 60
+  Social: 60
+  Sleep: 60
+  StudyBar: {fileID: 1376800175}
+  SocialBar: {fileID: 1913306040}
+  SleepBar: {fileID: 561978345}
+  Pos: 0
 --- !u!4 &758058216 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400078, guid: 461413943bab6ef40aa2a33f18380180, type: 3}
@@ -436,6 +443,10 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 8d74c62051dcbe24eb59170e3cceb73e, type: 2}
+    - target: {fileID: 100078, guid: 461413943bab6ef40aa2a33f18380180, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 461413943bab6ef40aa2a33f18380180, type: 3}
   m_IsPrefabParent: 0
@@ -480,6 +491,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Obstacle: {fileID: 1201742959385602, guid: f299697b57c405443805a7d5a56a35a4, type: 2}
+  player: {fileID: 0}
 --- !u!1 &1292135685
 GameObject:
   m_ObjectHideFlags: 0
@@ -655,7 +667,7 @@ GameObject:
   - component: {fileID: 1376800178}
   - component: {fileID: 1376800177}
   m_Layer: 5
-  m_Name: Image
+  m_Name: SocialBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -676,8 +688,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -530, y: -250}
-  m_SizeDelta: {x: 10, y: 70}
+  m_AnchoredPosition: {x: -180, y: 98.600006}
+  m_SizeDelta: {x: 1, y: 10}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1376800177
 MonoBehaviour:
@@ -891,7 +903,7 @@ GameObject:
   - component: {fileID: 1751601535}
   - component: {fileID: 1751601534}
   m_Layer: 5
-  m_Name: TEXT2
+  m_Name: Study
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -912,8 +924,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -394, y: -301.41327}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: -180, y: 78.600006}
+  m_SizeDelta: {x: 119.9, y: 22.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1751601534
 MonoBehaviour:
@@ -936,16 +948,16 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 20
+    m_FontSize: 15
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 40
-    m_Alignment: 0
+    m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
+    m_HorizontalOverflow: 1
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: STUDY
 --- !u!222 &1751601535
@@ -1027,7 +1039,7 @@ GameObject:
   - component: {fileID: 1913306043}
   - component: {fileID: 1913306042}
   m_Layer: 5
-  m_Name: Image (1)
+  m_Name: StudyBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1048,8 +1060,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -440, y: -250}
-  m_SizeDelta: {x: 10, y: 70}
+  m_AnchoredPosition: {x: -180, y: 68.600006}
+  m_SizeDelta: {x: 1, y: 10}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1913306042
 MonoBehaviour:
@@ -1095,6 +1107,7 @@ GameObject:
   - component: {fileID: 1928881103}
   - component: {fileID: 1928881102}
   - component: {fileID: 1928881101}
+  - component: {fileID: 1928881105}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1165,6 +1178,19 @@ Transform:
   m_Father: {fileID: 758058216}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 20, y: 0, z: 0}
+--- !u!114 &1928881105
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1928881100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1e133897463ca64e8373bbdb9b1b16b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 758058215}
+  Offset: 0
 --- !u!1 &1932161540
 GameObject:
   m_ObjectHideFlags: 0
@@ -1176,7 +1202,7 @@ GameObject:
   - component: {fileID: 1932161543}
   - component: {fileID: 1932161542}
   m_Layer: 5
-  m_Name: TEXT3
+  m_Name: Sleep
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1197,8 +1223,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -304, y: -301}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: -180, y: 48.600006}
+  m_SizeDelta: {x: 119.9, y: 22.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1932161542
 MonoBehaviour:
@@ -1221,16 +1247,16 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 20
+    m_FontSize: 15
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 2
+    m_MinSize: 1
     m_MaxSize: 40
-    m_Alignment: 0
+    m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
+    m_HorizontalOverflow: 1
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: SLEEP
 --- !u!222 &1932161543

@@ -5,6 +5,7 @@ using UnityEngine;
 public class Spawner : MonoBehaviour {
 
     public GameObject Obstacle;
+    public Player player;
 
 	// Use this for initialization
 	void Start () {
