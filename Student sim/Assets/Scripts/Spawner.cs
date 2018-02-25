@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Spawner : MonoBehaviour {
 
-    public GameObject Obstacle, Floor, Hedge;
+    public GameObject Obstacle, Floor, Hedge, QuestionObject;
     public Player player;
 
     private int FloorSpawnID;
@@ -12,6 +12,7 @@ public class Spawner : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         InvokeRepeating("SpawnObject", 0, 1);
+        InvokeRepeating("SpawnQuestion", 0, 10);
     }
 	
 	// Update is called once per frame
@@ -29,5 +30,10 @@ public class Spawner : MonoBehaviour {
     void SpawnObject()
     {
         Instantiate(Obstacle, new Vector3(transform.position.x,0,transform.position.z), transform.rotation);
+    }
+
+    void SpawnQuestion()
+    {
+        Instantiate(QuestionObject, new Vector3(0, 0, transform.position.z), transform.rotation);
     }
 }

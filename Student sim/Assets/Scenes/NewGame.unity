@@ -556,6 +556,8 @@ MonoBehaviour:
   Obstacle: {fileID: 1201742959385602, guid: f299697b57c405443805a7d5a56a35a4, type: 2}
   Floor: {fileID: 1436634595995874, guid: 3bca8e0bf450d204ca97e706f499800c, type: 2}
   Hedge: {fileID: 1988291330812054, guid: 7263c34bd5175e14da923b41de5bfca9, type: 2}
+  QuestionObject: {fileID: 1158158352053376, guid: 99319e7d9a8b6a24ab4e6214ae7f12cc,
+    type: 2}
   player: {fileID: 758058215}
 --- !u!1 &1292135685
 GameObject:
