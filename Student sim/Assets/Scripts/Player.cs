@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour {
 
@@ -11,6 +12,9 @@ public class Player : MonoBehaviour {
     public int GameSpeed, GameRotation;
     public float Study = 100, Social=100, Sleep=100;
     public GameObject StudyBar, SocialBar, SleepBar;
+
+    public Text ScoreText;
+    private int Score, Years, Months, Weeks, Days;
 
     private bool OnFloor;
     private float MoveTime;
@@ -32,8 +36,9 @@ public class Player : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
+        ScoreManager();
         BarsManager();
-
+        Score = (int)transform.position.z;
         transform.Translate(Vector3.forward * Time.deltaTime * GameSpeed);
 
         transform.eulerAngles = Vector3.zero;
@@ -129,5 +134,14 @@ public class Player : MonoBehaviour {
         StudyBar.transform.localScale = new Vector3(Study,1,1);
         SocialBar.transform.localScale = new Vector3(Social,1, 1);
         SleepBar.transform.localScale = new Vector3(Sleep,1, 1);
+    }
+
+    void ScoreManager()
+    {
+        Years = Score / (28 * 12);
+        Months = (Score - Years * (28*12)) / 28;
+        Weeks = (Score - Months*28 - Years * (28 * 12)) / 7;
+        Days = Score - Weeks * 7 - Months * 28 - Years * (28 * 12);
+        ScoreText.text = "Years: " + Years + " Months: " + Months + " Weeks: " + Weeks + " Days: " + Days;
     }
 }

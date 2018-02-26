@@ -10,7 +10,7 @@ public class QuestionScript : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         Instantiate(text, new Vector3(transform.position.x, transform.position.y+0.25f, transform.position.z - 0.51f), transform.rotation, transform);
-        text.GetComponent<TextMesh>().text = "TESTING";
+        //text.GetComponent<TextMesh>().text = "TESTING";
 	}
 	
 	// Update is called once per frame

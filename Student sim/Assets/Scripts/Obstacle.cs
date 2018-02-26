@@ -32,6 +32,9 @@ public class Obstacle : MonoBehaviour {
 	void Update () {
         //transform.Translate(0,0,-0.5f);
 
+        if (transform.position.z < player.transform.position.z - 10)
+            Destroy(gameObject);
+
         if (transform.position.z < -10)
             Destroy(gameObject);
 	}

@@ -12,7 +12,7 @@ public class Spawner : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         InvokeRepeating("SpawnObject", 0, 1);
-        InvokeRepeating("SpawnQuestion", 0, 10);
+        //InvokeRepeating("SpawnQuestion", 0, 10);
     }
 	
 	// Update is called once per frame
