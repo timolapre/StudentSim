@@ -18,13 +18,16 @@ public class Player : MonoBehaviour {
     public int Pos;
     private Vector2 MousePos, ConstantMousePos;
 
+    Animator Anim;
+    int JumpHash = Animator.StringToHash("jump-up");
+
     private KeyCode[] RightKeys = new KeyCode[] { KeyCode.RightArrow, KeyCode.D };
     private KeyCode[] LeftKeys = new KeyCode[] { KeyCode.LeftArrow, KeyCode.A };
     private KeyCode[] JumpKeys = new KeyCode[] { KeyCode.Space, KeyCode.UpArrow, KeyCode.W };
 
     // Use this for initialization
     void Start() {
-
+        Anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -50,6 +53,12 @@ public class Player : MonoBehaviour {
         {
             GetComponent<Rigidbody>().AddForce(0, JumpForce, 0);
             OnFloor = false ;
+            Anim.SetBool("Jump", true);
+        }
+        
+        if (OnFloor == true && Anim.GetBool("Jump") == true)
+        {
+            Anim.SetBool("Jump", false);
         }
 
         MoveTime += Time.deltaTime*HorizontalSpeed;
