@@ -6,7 +6,7 @@ public class Spawner : MonoBehaviour {
 
     public static int QuestionPosZ = 1000;
 
-    public int Mult;
+    public int Mult = 5;
 
     public GameObject Obstacle, Floor, Hedge, QuestionObject;
     public Player player;
