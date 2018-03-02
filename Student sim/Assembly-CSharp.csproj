@@ -58,6 +58,7 @@
      <Compile Include="Assets\Scripts\Obstacle.cs" />
      <Compile Include="Assets\Scripts\Player.cs" />
      <Compile Include="Assets\Scripts\QuestionScript.cs" />
+     <Compile Include="Assets\Scripts\Rotater.cs" />
      <Compile Include="Assets\Scripts\Spawner.cs" />
  <Reference Include="Facebook.Unity.Settings">
  <HintPath>C:/Users/timol/OneDrive/Documenten/GitHubResporities/StudentSim/Student sim/Library/FacebookSDK/Facebook.Unity.Settings.dll</HintPath>

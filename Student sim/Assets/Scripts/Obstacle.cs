@@ -12,7 +12,7 @@ public class Obstacle : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         ID = Random.Range(1, 4);
-        ChangeValue = Random.Range(-30,30);
+        ChangeValue = Random.Range(-30,20);
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
         transform.position = new Vector3(Random.Range(-1,2),transform.position.y,transform.position.z);
 

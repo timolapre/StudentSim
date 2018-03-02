@@ -9,12 +9,12 @@ public class Player : MonoBehaviour {
     public int JumpForce; 
     [Range(0,25)]
     public int HorizontalSpeed;
-    public int GameSpeed, GameRotation;
+    public int GameSpeed, GameRotation, Rotating;
     public float Study = 100, Social=100, Sleep=100;
     public GameObject StudyBar, SocialBar, SleepBar;
 
     public Text ScoreText;
-    private int Score, Years, Months, Weeks, Days;
+    private static int Score, Years, Months, Weeks, Days;
 
     private bool OnFloor;
     private float MoveTime;
@@ -36,12 +36,37 @@ public class Player : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
+
+        /*if(OnFloor)
+            GetComponent<Rigidbody>().useGravity = false;
+        else
+            GetComponent<Rigidbody>().useGravity = true;*/
+
+        if(transform.position.z >= Spawner.QuestionPosZ)
+        {
+            if (Pos == 1)
+                Rotating = -1;
+            else if (Pos == -1)
+                Rotating = 1;
+            Pos = 0;
+            Spawner.QuestionPosZ = 100000;
+            Invoke("QuestionToFalse", 0.3f);
+        }
+
         ScoreManager();
         BarsManager();
         Score = (int)transform.position.z;
-        transform.Translate(Vector3.forward * Time.deltaTime * GameSpeed);
-
         transform.eulerAngles = Vector3.zero;
+
+        if (Rotating == 0)
+        {
+            transform.Translate(Vector3.forward * Time.deltaTime * GameSpeed);
+        }
+        else
+        {
+            Vector3 ppos = transform.position;
+            transform.position = ppos;
+        }
 
         if ((Swipe() == "Right" || KeyPressed("Right")) && Pos < 1)
         {
@@ -61,14 +86,29 @@ public class Player : MonoBehaviour {
             Anim.SetBool("Jump", true);
         }
         
-        if (OnFloor == true && Anim.GetBool("Jump") == true)
+        if (OnFloor && Anim.GetBool("Jump"))
         {
             Anim.SetBool("Jump", false);
         }
 
         MoveTime += Time.deltaTime*HorizontalSpeed;
-        transform.position = Vector3.Lerp(transform.position, new Vector3(Pos, transform.position.y, transform.position.z), MoveTime);
-        //transform.position = new Vector3(Pos, transform.position.y, -8);
+        //if(GameRotation%360 == 0 || GameRotation%360 == 180)
+            transform.position = Vector3.Lerp(transform.position, new Vector3(Pos, transform.position.y, transform.position.z), MoveTime);
+        //else if (GameRotation%360 == 0 || GameRotation%360 == 180)
+            //transform.position = Vector3.Lerp(transform.position, new Vector3(transform.position.x, Pos, transform.position.z), MoveTime);
+
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            Rotating = 1;
+        }
+
+        if (Input.GetKeyDown(KeyCode.K))
+        {
+            Rotating = -1;
+        }
+
+
+        //transform.eulerAngles = new Vector3(0,GameRotation,0);
     }
 
     private string Swipe()
@@ -143,5 +183,10 @@ public class Player : MonoBehaviour {
         Weeks = (Score - Months*28 - Years * (28 * 12)) / 7;
         Days = Score - Weeks * 7 - Months * 28 - Years * (28 * 12);
         ScoreText.text = "Years: " + Years + " Months: " + Months + " Weeks: " + Weeks + " Days: " + Days;
+    }
+
+    void QuestionToFalse()
+    {
+        Spawner.Question = false;
     }
 }
