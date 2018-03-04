@@ -642,7 +642,7 @@ GameObject:
   - component: {fileID: 970832558}
   m_Layer: 0
   m_Name: Spawner
-  m_TagString: Untagged
+  m_TagString: Spawner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -671,8 +671,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2643cd9c30faf5c48afdff2635399703, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Mult: 5
-  Obstacle: {fileID: 1201742959385602, guid: f299697b57c405443805a7d5a56a35a4, type: 2}
+  Multiplier: 5
+  RenderDistance: 25
+  QuestionAfter: 3
+  Obstacle: {fileID: 1457630058861324, guid: cf80c44091b8cc844945146f457c7042, type: 2}
   Floor: {fileID: 1436634595995874, guid: 3bca8e0bf450d204ca97e706f499800c, type: 2}
   Hedge: {fileID: 1988291330812054, guid: 7263c34bd5175e14da923b41de5bfca9, type: 2}
   QuestionObject: {fileID: 1158158352053376, guid: 99319e7d9a8b6a24ab4e6214ae7f12cc,

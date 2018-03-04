@@ -15,6 +15,13 @@ public class Destroyer : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        if (transform.position.x > 2.5f && transform.position.x < 3.5f && transform.position.x != 3 && !Spawner.Question)
+            transform.position = new Vector3(3, transform.position.y, transform.position.z);
+        if (transform.position.x < -2.5f && transform.position.x > -3.5f && transform.position.x != -3 && !Spawner.Question)
+            transform.position = new Vector3(-3, transform.position.y, transform.position.z);
+        if (transform.position.x < 0.5f && transform.position.x > -0.5f && transform.position.x != 0 && !Spawner.Question)
+            transform.position = new Vector3(0, transform.position.y, transform.position.z);
+
         if (transform.position.z < player.transform.position.z - 20)
             Destroy(gameObject);
 

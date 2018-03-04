@@ -19,16 +19,14 @@ public class Rotater : MonoBehaviour {
         if (player.Rotating == 1)
         {
             MoveTime += Time.deltaTime *5;
-            if(Input.GetKeyDown(KeyCode.I))
-                MoveTime += 0.1f;
             transform.eulerAngles = Vector3.Lerp(transform.eulerAngles, new Vector3(0, 270, 0), Mathf.Max(MoveTime,0));
-            Debug.Log("ROTATE LEFT");
+            //Debug.Log("ROTATE LEFT");
         }
         if (player.Rotating == -1)
         {
             MoveTime += Time.deltaTime * 5;
             transform.eulerAngles = Vector3.Lerp(transform.eulerAngles, new Vector3(0, 90, 0), MoveTime);
-            Debug.Log("ROTATE RIGHT");
+            //Debug.Log("ROTATE RIGHT");
         }
         if (player.Rotating == 0)
         {

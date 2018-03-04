@@ -97,17 +97,6 @@ public class Player : MonoBehaviour {
         //else if (GameRotation%360 == 0 || GameRotation%360 == 180)
             //transform.position = Vector3.Lerp(transform.position, new Vector3(transform.position.x, Pos, transform.position.z), MoveTime);
 
-        if (Input.GetKeyDown(KeyCode.L))
-        {
-            Rotating = 1;
-        }
-
-        if (Input.GetKeyDown(KeyCode.K))
-        {
-            Rotating = -1;
-        }
-
-
         //transform.eulerAngles = new Vector3(0,GameRotation,0);
     }
 
