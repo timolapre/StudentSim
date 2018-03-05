@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour {
 
@@ -22,6 +23,8 @@ public class Player : MonoBehaviour {
     public int Pos;
     private Vector2 MousePos, ConstantMousePos;
 
+    Spawner spawner;
+
     Animator Anim;
     int JumpHash = Animator.StringToHash("jump-up");
 
@@ -32,11 +35,11 @@ public class Player : MonoBehaviour {
     // Use this for initialization
     void Start() {
         Anim = GetComponent<Animator>();
+        spawner = transform.Find("Spawner").GetComponent<Spawner>();
     }
 
     // Update is called once per frame
     void Update() {
-
         /*if(OnFloor)
             GetComponent<Rigidbody>().useGravity = false;
         else
@@ -45,9 +48,15 @@ public class Player : MonoBehaviour {
         if(transform.position.z >= Spawner.QuestionPosZ)
         {
             if (Pos == 1)
+            {
                 Rotating = -1;
+                spawner.ChangeValues("right");
+            }
             else if (Pos == -1)
+            {
                 Rotating = 1;
+                spawner.ChangeValues("left");
+            }
             Pos = 0;
             Spawner.QuestionPosZ = 100000;
             Invoke("QuestionToFalse", 0.3f);
@@ -98,6 +107,10 @@ public class Player : MonoBehaviour {
             //transform.position = Vector3.Lerp(transform.position, new Vector3(transform.position.x, Pos, transform.position.z), MoveTime);
 
         //transform.eulerAngles = new Vector3(0,GameRotation,0);
+
+        if(Study <= 0 || Social <= 0 || Sleep <= 0)
+            SceneManager.LoadScene("Game Over", LoadSceneMode.Single);
+
     }
 
     private string Swipe()

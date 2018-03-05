@@ -26,7 +26,7 @@ GameObject:
   - component: {fileID: 114465930786059714}
   - component: {fileID: 54505737669076872}
   m_Layer: 0
-  m_Name: Hedge
+  m_Name: HedgeOLD
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

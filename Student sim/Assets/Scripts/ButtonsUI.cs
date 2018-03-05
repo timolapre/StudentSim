@@ -18,5 +18,7 @@ public class ButtonsUI : MonoBehaviour {
     public void ChangeScene(string scene)
     {
         SceneManager.LoadScene(scene,LoadSceneMode.Single);
+        Spawner.FloorSpawnID = 0;
+        Spawner.Question = false;
     }
 }
