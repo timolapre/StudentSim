@@ -10,11 +10,12 @@ public class Spawner : MonoBehaviour
 
     public int Multiplier = 5, RenderDistance = 10, QuestionAfter = 20, ShowQuestionAfterDistance = 5;
 
-    public GameObject Obstacle, Floor, Hedge, QuestionObject;
+    public GameObject[] Obstacle;
+    public GameObject Floor, Hedge, QuestionObject;
     public Player player;
 
     public static int FloorSpawnID, SpawnAction;
-    private int QuestionCount;
+    private int QuestionCount, RandomObj;
     public static bool Question;
     private Vector3 QuestionPos;
     private bool SpawnLevel = true;
@@ -85,7 +86,8 @@ public class Spawner : MonoBehaviour
                 tempedge2.transform.eulerAngles = new Vector3(tempedge2.transform.eulerAngles.z, tempedge2.transform.eulerAngles.y + 90, tempedge2.transform.eulerAngles.z);
                 if (i > 0)
                 {
-                    GameObject tempobstacle = Instantiate(Obstacle, new Vector3(0, 0, FloorSpawnID * Multiplier), transform.rotation) as GameObject;
+                    RandomObj = Random.Range(0, Obstacle.Length);
+                    GameObject tempobstacle = Instantiate(Obstacle[RandomObj], new Vector3(0, 0, FloorSpawnID * Multiplier), transform.rotation) as GameObject;
                     tempobstacle.transform.Translate((i + 2) * Multiplier, 0, 0);
                     tempobstacle.transform.eulerAngles = new Vector3(tempobstacle.transform.eulerAngles.z, tempobstacle.transform.eulerAngles.y, tempobstacle.transform.eulerAngles.z);
                     tempobstacle.GetComponent<Obstacle>().XorZ = 1;
@@ -113,7 +115,8 @@ public class Spawner : MonoBehaviour
                 tempedge2.transform.eulerAngles = new Vector3(tempedge2.transform.eulerAngles.z, tempedge2.transform.eulerAngles.y + 90, tempedge2.transform.eulerAngles.z);
                 if (i > 0)
                 {
-                    GameObject tempobstacle = Instantiate(Obstacle, new Vector3(0, 0, FloorSpawnID * Multiplier), transform.rotation) as GameObject;
+                    RandomObj = Random.Range(0, Obstacle.Length);
+                    GameObject tempobstacle = Instantiate(Obstacle[RandomObj], new Vector3(0, 0, FloorSpawnID * Multiplier), transform.rotation) as GameObject;
                     tempobstacle.transform.Translate((-2 - i) * Multiplier, 0, 0);
                     tempobstacle.transform.eulerAngles = new Vector3(tempobstacle.transform.eulerAngles.z, tempobstacle.transform.eulerAngles.y + 180, tempobstacle.transform.eulerAngles.z);
                     tempobstacle.GetComponent<Obstacle>().XorZ = 1;
@@ -145,7 +148,10 @@ public class Spawner : MonoBehaviour
     void SpawnObject()
     {
         if (SpawnAction == 0)
-            Instantiate(Obstacle, new Vector3(transform.position.x, 0, FloorSpawnID * Multiplier), transform.rotation);
+        {
+            RandomObj = Random.Range(0, Obstacle.Length);
+            Instantiate(Obstacle[RandomObj], new Vector3(transform.position.x, 0, FloorSpawnID * Multiplier), transform.rotation);
+        }
     }
 
     void SpawnQuestion()
@@ -201,7 +207,7 @@ public class Spawner : MonoBehaviour
     {
         if (moveto == "left")
         {
-            player.Study += questions[WhatQuestion - 1].Changes[0];
+            player.Study += questions[WhatQuestion - 1].Changes[RandomObj];
             player.Social += questions[WhatQuestion - 1].Changes[1];
             player.Sleep += questions[WhatQuestion - 1].Changes[2];
         }
