@@ -22,7 +22,7 @@ public class Spawner : MonoBehaviour
 
     GameObject Rotater;
 
-    public int WhatQuestion = 1;
+    public int WhatQuestion = 0;
     public Canvas QuestionCanvas;
     public TextMeshProUGUI QuestionText, Answer1Text, Answer2Text;
     public Questions[] questions;
@@ -58,8 +58,11 @@ public class Spawner : MonoBehaviour
         if (Question)
         {
             int dist = FloorSpawnID;
-            if (QuestionPosZ < player.transform.position.z + Multiplier * ShowQuestionAfterDistance)
+            if (QuestionPosZ < player.transform.position.z + Multiplier * ShowQuestionAfterDistance && WhatQuestion == 0)
+            {
+                WhatQuestion = Random.Range(0, questions.Length);
                 ShowQuestions(WhatQuestion);
+            }
         }
         else
         {
@@ -207,7 +210,7 @@ public class Spawner : MonoBehaviour
     {
         if (moveto == "left")
         {
-            player.Study += questions[WhatQuestion - 1].Changes[RandomObj];
+            player.Study += questions[WhatQuestion - 1].Changes[0];
             player.Social += questions[WhatQuestion - 1].Changes[1];
             player.Sleep += questions[WhatQuestion - 1].Changes[2];
         }

@@ -637,5 +637,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   XorZ: 0
   Ypos: 0
+  YRot: 270
   ChangeValue: 00000000f6ffffff0f000000
   player: {fileID: 0}

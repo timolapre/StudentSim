@@ -39,7 +39,7 @@ Transform:
   m_GameObject: {fileID: 1639389183978044}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.0571249, y: 0.3726168, z: 3.2324}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -123,5 +123,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   XorZ: 0
   Ypos: 0.5
+  YRot: 0
   ChangeValue: 0f00000005000000fbffffff
   player: {fileID: 0}

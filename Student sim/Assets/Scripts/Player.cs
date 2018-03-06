@@ -51,11 +51,13 @@ public class Player : MonoBehaviour {
             {
                 Rotating = -1;
                 spawner.ChangeValues("right");
+                spawner.WhatQuestion = 0;
             }
             else if (Pos == -1)
             {
                 Rotating = 1;
                 spawner.ChangeValues("left");
+                spawner.WhatQuestion = 0;
             }
             Pos = 0;
             Spawner.QuestionPosZ = 100000;
