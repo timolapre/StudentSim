@@ -700,7 +700,7 @@ GameObject:
   - component: {fileID: 553185069}
   - component: {fileID: 553185068}
   m_Layer: 5
-  m_Name: Social
+  m_Name: Study
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -756,7 +756,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: SOCIAL
+  m_Text: STUDY
 --- !u!222 &553185069
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1308,6 +1308,17 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &758058220
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 758058214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f766235c40796444792cdf0873e6f88b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &829032533
 GameObject:
   m_ObjectHideFlags: 0
@@ -1480,7 +1491,7 @@ MonoBehaviour:
   Multiplier: 5
   RenderDistance: 25
   QuestionAfter: 3
-  ShowQuestionAfterDistance: 5
+  ShowQuestionAfterDistance: 10
   Obstacle:
   - {fileID: 1636956177398784, guid: e7616e604e950bc41ba48df30f6f59f9, type: 2}
   - {fileID: 1655704013997494, guid: fe3307abc1b00a146b07924c67bb8ee5, type: 2}
@@ -1493,20 +1504,24 @@ MonoBehaviour:
   QuestionObject: {fileID: 1158158352053376, guid: 99319e7d9a8b6a24ab4e6214ae7f12cc,
     type: 2}
   player: {fileID: 758058215}
-  WhatQuestion: 1
+  WhatQuestion: 0
   QuestionCanvas: {fileID: 1393645741}
   QuestionText: {fileID: 60882814}
   Answer1Text: {fileID: 2051346481}
   Answer2Text: {fileID: 2030065809}
   questions:
-  - question: Question 1
-    answer1: Left
-    answer2: Right
-    Changes: 1400000014000000ecffffffecffffffecffffff14000000
-  - question: Q2
-    answer1: L
-    answer2: R
-    Changes: 000000000000000000000000000000000000000000000000
+  - question: Your friends are going out and ask if you want to join
+    answer1: Join
+    answer2: Don't Join
+    Changes: f1ffffff19000000e7ffffff0a000000ecffffff14000000
+  - question: You have a lecture tomorrow 9PM
+    answer1: Don't Go
+    answer2: Go
+    Changes: ecfffffffbffffff1e000000140000000a000000e7ffffff
+  - question: You have a test tomorrow and have been learning for the past 5 hours
+    answer1: Take a break
+    answer2: Keep learning
+    Changes: f1fffffffbffffff0f0000000f000000fbffffffecffffff
 --- !u!1 &1027905561
 GameObject:
   m_ObjectHideFlags: 0
@@ -2073,7 +2088,7 @@ GameObject:
   - component: {fileID: 1376800178}
   - component: {fileID: 1376800177}
   m_Layer: 5
-  m_Name: SocialBar
+  m_Name: StudyBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2499,7 +2514,7 @@ GameObject:
   - component: {fileID: 1751601535}
   - component: {fileID: 1751601534}
   m_Layer: 5
-  m_Name: Study
+  m_Name: Social
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2555,7 +2570,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: STUDY
+  m_Text: SOCIAL
 --- !u!222 &1751601535
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2710,7 +2725,7 @@ GameObject:
   - component: {fileID: 1913306043}
   - component: {fileID: 1913306042}
   m_Layer: 5
-  m_Name: StudyBar
+  m_Name: SocialBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -7,11 +7,11 @@ using UnityEngine.SceneManagement;
 public class Player : MonoBehaviour {
 
     [Range(200, 300)]
-    public int JumpForce; 
-    [Range(0,25)]
+    public int JumpForce;
+    [Range(0, 25)]
     public int HorizontalSpeed;
     public int GameSpeed, GameRotation, Rotating;
-    public float Study = 100, Social=100, Sleep=100;
+    public float Study = 100, Social = 100, Sleep = 100;
     public GameObject StudyBar, SocialBar, SleepBar;
 
     public Text ScoreText;
@@ -45,7 +45,7 @@ public class Player : MonoBehaviour {
         else
             GetComponent<Rigidbody>().useGravity = true;*/
 
-        if(transform.position.z >= Spawner.QuestionPosZ)
+        if (transform.position.z >= Spawner.QuestionPosZ)
         {
             if (Pos == 1)
             {
@@ -64,10 +64,15 @@ public class Player : MonoBehaviour {
             Invoke("QuestionToFalse", 0.3f);
         }
 
-        ScoreManager();
+        //ScoreManager();
         BarsManager();
         Score = (int)transform.position.z;
         transform.eulerAngles = Vector3.zero;
+
+        if (Input.GetKeyDown(KeyCode.M))
+            Score = 1008;
+
+        ScoreManager();
 
         if (Rotating == 0)
         {
@@ -93,25 +98,32 @@ public class Player : MonoBehaviour {
         if ((Swipe() == "Jump" || KeyPressed("Jump")) && OnFloor)
         {
             GetComponent<Rigidbody>().AddForce(0, JumpForce, 0);
-            OnFloor = false ;
+            OnFloor = false;
             Anim.SetBool("Jump", true);
         }
-        
+
         if (OnFloor && Anim.GetBool("Jump"))
         {
             Anim.SetBool("Jump", false);
         }
 
-        MoveTime += Time.deltaTime*HorizontalSpeed;
+        MoveTime += Time.deltaTime * HorizontalSpeed;
         //if(GameRotation%360 == 0 || GameRotation%360 == 180)
-            transform.position = Vector3.Lerp(transform.position, new Vector3(Pos, transform.position.y, transform.position.z), MoveTime);
+        transform.position = Vector3.Lerp(transform.position, new Vector3(Pos, transform.position.y, transform.position.z), MoveTime);
         //else if (GameRotation%360 == 0 || GameRotation%360 == 180)
-            //transform.position = Vector3.Lerp(transform.position, new Vector3(transform.position.x, Pos, transform.position.z), MoveTime);
+        //transform.position = Vector3.Lerp(transform.position, new Vector3(transform.position.x, Pos, transform.position.z), MoveTime);
 
         //transform.eulerAngles = new Vector3(0,GameRotation,0);
 
-        if(Study <= 0 || Social <= 0 || Sleep <= 0)
+        if (Study <= 0 || Social <= 0 || Sleep <= 0 || Years == 3)
+        {
+            if(Years == 3)
+                HighScore.HighScoreCheck(Score, 2, Study, Social, Sleep);
+            else
+                HighScore.HighScoreCheck(Score, 1, Study, Social, Sleep);
+
             SceneManager.LoadScene("Game Over", LoadSceneMode.Single);
+        }
 
     }
 
@@ -193,4 +205,5 @@ public class Player : MonoBehaviour {
     {
         Spawner.Question = false;
     }
+
 }
