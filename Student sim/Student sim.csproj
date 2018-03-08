@@ -322,6 +322,10 @@
     <Compile Include="Assets\Scripts\ButtonsUI.cs" />
     <Compile Include="Assets\Scripts\Camera.cs" />
     <Compile Include="Assets\Scripts\Destroyer.cs" />
+    <Compile Include="Assets\Scripts\FloorAndHedgeSizer.cs" />
+    <Compile Include="Assets\Scripts\HighScore.cs" />
+    <Compile Include="Assets\Scripts\LightMovement.cs" />
+    <Compile Include="Assets\Scripts\Menu.cs" />
     <Compile Include="Assets\Scripts\Obstacle.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
     <Compile Include="Assets\Scripts\QuestionScript.cs" />
