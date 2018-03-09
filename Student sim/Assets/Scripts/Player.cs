@@ -12,7 +12,7 @@ public class Player : MonoBehaviour {
     public int HorizontalSpeed;
     public int GameSpeed, GameRotation, Rotating;
     public float Study = 100, Social = 100, Sleep = 100;
-    public GameObject StudyBar, SocialBar, SleepBar;
+    public Slider StudySlider, SocialSlider, SleepSlider;
 
     public Text ScoreText;
     private static int Score, Years, Months, Weeks, Days;
@@ -187,9 +187,21 @@ public class Player : MonoBehaviour {
 
     void BarsManager()
     {
-        StudyBar.transform.localScale = new Vector3(Study,1,1);
-        SocialBar.transform.localScale = new Vector3(Social,1, 1);
-        SleepBar.transform.localScale = new Vector3(Sleep,1, 1);
+        StudySlider.value = Study;
+        SocialSlider.value = Social;
+        SleepSlider.value = Sleep;
+        if (Study > 100)
+        {
+            Study = 100;
+        }
+        if (Social > 100)
+        {
+            Social = 100;
+        }
+        if (Sleep > 100)
+        {
+            Sleep = 100;
+        }
     }
 
     void ScoreManager()
