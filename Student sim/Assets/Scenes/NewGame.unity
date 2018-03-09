@@ -1319,6 +1319,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f766235c40796444792cdf0873e6f88b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  id: 0
 --- !u!1 &829032533
 GameObject:
   m_ObjectHideFlags: 0
@@ -1510,7 +1511,7 @@ MonoBehaviour:
   Answer1Text: {fileID: 2051346481}
   Answer2Text: {fileID: 2030065809}
   questions:
-  - question: Your friends are going out and ask if you want to join
+  - question: Je hebt morgen een tentamen
     answer1: Join
     answer2: Don't Join
     Changes: f1ffffff19000000e7ffffff0a000000ecffffff14000000
