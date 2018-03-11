@@ -44,6 +44,9 @@ public class Player : MonoBehaviour {
             GetComponent<Rigidbody>().useGravity = false;
         else
             GetComponent<Rigidbody>().useGravity = true;*/
+        int minvalue = 5, increaseevery = 80;
+        GameSpeed = Mathf.Min(13,Mathf.Max(minvalue,((int)transform.position.z+increaseevery*minvalue)/increaseevery));
+        //GameSpeed = Mathf.Min(13, Mathf.Max(minvalue,(int)Mathf.Sqrt(1.8f * Mathf.Pow(transform.position.z, 0.8f))));
 
         if (transform.position.z >= Spawner.QuestionPosZ)
         {

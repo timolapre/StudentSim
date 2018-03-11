@@ -1503,8 +1503,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JumpForce: 250
-  HorizontalSpeed: 10
-  GameSpeed: 10
+  HorizontalSpeed: 7
+  GameSpeed: 5
   GameRotation: 0
   Rotating: 0
   Study: 60
@@ -1987,18 +1987,54 @@ MonoBehaviour:
   Answer1Text: {fileID: 2051346481}
   Answer2Text: {fileID: 2030065809}
   questions:
-  - question: Your friends are going out and ask if you want to join
-    answer1: Join
-    answer2: Don't Join
-    Changes: f1ffffff19000000e7ffffff0a000000ecffffff14000000
-  - question: You have a lecture tomorrow 9PM
-    answer1: Don't Go
-    answer2: Go
-    Changes: ecfffffffbffffff1e000000140000000a000000e7ffffff
-  - question: You have a test tomorrow and have been learning for the past 5 hours
-    answer1: Take a break
-    answer2: Keep learning
-    Changes: f1fffffffbffffff0f0000000f000000fbffffffecffffff
+  - question: You have an exam tomorrow. Do you study all night or go to bed?
+    answer1: Study all night
+    answer2: Go to bed
+    Changes: 0f00000000000000e7fffffff1ffffff0000000019000000
+  - question: 'Your exam is done. Do you start preparing for the next one or go out
+      drinking with your friends? '
+    answer1: Start studying
+    answer2: Go drinking
+    Changes: 19000000ecffffff0f000000f1ffffff19000000ecffffff
+  - question: You have class at 9am but still want to hang out in the pub. Do you
+      go home?
+    answer1: Stay at pub
+    answer2: Go home
+    Changes: ecffffff14000000e7ffffff14000000f1ffffff14000000
+  - question: You have a date, but are too tired. Do you stay home?
+    answer1: Go on the date
+    answer2: Stay home
+    Changes: 0000000019000000ecffffff00000000ecffffff19000000
+  - question: "You\u2019re sick, but you have an exam tomorrow. Do you stay home or
+      go?"
+    answer1: Stay home
+    answer2: Take the exam
+    Changes: ecffffff00000000190000001400000000000000e7ffffff
+  - question: "You haven\u2019t seen your parents in a long time, but it costs a day
+      to travel to them. Do you go or stay here for the weekend? "
+    answer1: See parents
+    answer2: Stay Home
+    Changes: ecffffff0f0000000000000014000000f1ffffff00000000
+  - question: 'Your lab partner does not work hard enough. Do you kick him out or
+      let him stay? '
+    answer1: Kick him out
+    answer2: Let him stay
+    Changes: 19000000e7ffffff00000000e7ffffff0f00000000000000
+  - question: You can learn a bit for an exam and get a D or learn all week and get
+      an A. What do you do?
+    answer1: Go for a D
+    answer2: Get an A
+    Changes: ecffffff190000000f00000019000000e7fffffff1ffffff
+  - question: 'The new Game of Thrones is out, but you still need to read an article
+      for tomorrow. Watch the show or read? '
+    answer1: Watch GoT
+    answer2: Read article
+    Changes: ecffffff14000000ecffffff19000000f1ffffff0f000000
+  - question: "You\u2019ll pass this course no matter what. Get an extra high grade
+      for the last exam or party with your friends? "
+    answer1: High grade
+    answer2: Party
+    Changes: 19000000e7ffffff0f000000e7ffffff19000000e7ffffff
 --- !u!1 &1027905561
 GameObject:
   m_ObjectHideFlags: 0

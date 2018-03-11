@@ -47,7 +47,7 @@ public class Spawner : MonoBehaviour
             //Instantiate(Floor, new Vector3(0, 0, FloorSpawnID * 10), transform.rotation);
             Instantiate(Hedge, new Vector3(3, 2, FloorSpawnID * Multiplier), transform.rotation);
             Instantiate(Hedge, new Vector3(-3, 2, FloorSpawnID * Multiplier), transform.rotation);
-            if (FloorSpawnID > 5)
+            if (FloorSpawnID > 3)
                 SpawnObject();
             FloorSpawnID++;
         }
