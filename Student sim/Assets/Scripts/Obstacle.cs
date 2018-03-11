@@ -63,6 +63,10 @@ public class Obstacle : MonoBehaviour {
                 player.Study += ChangeValue[0];
                 player.Social += ChangeValue[1];
                 player.Sleep += ChangeValue[2];
+                if(transform.name.Contains("Beer") && Random.Range(0,3) == 0)
+                {
+                    player.transform.Find("Main Camera").GetComponent<Camera>().DrunkEffect(5f);
+                }
             }
         }
 
