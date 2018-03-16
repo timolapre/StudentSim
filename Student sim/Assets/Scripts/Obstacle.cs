@@ -10,7 +10,7 @@ public class Obstacle : MonoBehaviour {
 
     public int XorZ;
     private int ID;
-    public float Ypos, YRot;
+    public float Ypos, YRot, XRot;
     public int[] ChangeValue;
 
     public Player player;
@@ -26,7 +26,7 @@ public class Obstacle : MonoBehaviour {
         if (XorZ == 0)
         {
             transform.position = new Vector3(Random.Range(-1, 2), Ypos, transform.position.z);
-            transform.eulerAngles = new Vector3(0, YRot, 0);
+            transform.eulerAngles = new Vector3(XRot, YRot, 0);
         }
         else if (XorZ == 1)
             transform.position = new Vector3(transform.position.x, Ypos, Spawner.FloorSpawnID * spawner.Multiplier + Random.Range(-1, 2) - spawner.RenderDistance*spawner.Multiplier);
