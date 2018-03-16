@@ -62,6 +62,14 @@ public class Player : MonoBehaviour {
                 spawner.ChangeValues("left");
                 spawner.WhatQuestion = 0;
             }
+            else if (Pos == 0)
+            {
+                if (Years == 3)
+                    HighScore.HighScoreCheck(Score, 2, Study, Social, Sleep);
+                else
+                    HighScore.HighScoreCheck(Score, 1, Study, Social, Sleep);
+                SceneManager.LoadScene("Game Over", LoadSceneMode.Single);
+            }
             Pos = 0;
             Spawner.QuestionPosZ = 100000;
             Invoke("QuestionToFalse", 0.3f);

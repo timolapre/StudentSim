@@ -15,7 +15,7 @@ public class ButtonsUI : MonoBehaviour {
             vplayer.Playvideo();
         }
         else
-            SceneManager.LoadScene(scene, LoadSceneMode.Single);
+        SceneManager.LoadScene(scene, LoadSceneMode.Single);
         Spawner.FloorSpawnID = 0;
         Spawner.Question = false;
     }
