@@ -5,19 +5,17 @@ using UnityEngine.SceneManagement;
 
 public class ButtonsUI : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    public Video vplayer;
 
     public void ChangeScene(string scene)
     {
-        SceneManager.LoadScene(scene,LoadSceneMode.Single);
+
+        if (Video.PlayVideo == 0)
+        {
+            vplayer.Playvideo();
+        }
+        else
+            SceneManager.LoadScene(scene, LoadSceneMode.Single);
         Spawner.FloorSpawnID = 0;
         Spawner.Question = false;
     }
