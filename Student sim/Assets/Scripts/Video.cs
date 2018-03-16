@@ -11,6 +11,15 @@ public class Video : MonoBehaviour {
     {
         PlayVideo = PlayerPrefs.GetInt("Video");
     }
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            SceneManager.LoadScene("NewGame", LoadSceneMode.Single);
+        }
+
+    }
     
     public void Playvideo()
     {
