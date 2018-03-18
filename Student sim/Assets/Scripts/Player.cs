@@ -11,7 +11,7 @@ public class Player : MonoBehaviour {
     [Range(0, 25)]
     public int HorizontalSpeed;
     public int GameSpeed, GameRotation, Rotating;
-    public float Study = 100, Social = 100, Sleep = 100;
+    public float Study = 100, Social = 100, Sleep = 100, DecreaseSliderSpeed;
     public Slider StudySlider, SocialSlider, SleepSlider;
 
     public Text ScoreText;
@@ -136,6 +136,10 @@ public class Player : MonoBehaviour {
             SceneManager.LoadScene("Game Over", LoadSceneMode.Single);
         }
 
+        Study -= DecreaseSliderSpeed;
+        Social -= DecreaseSliderSpeed;
+        Sleep -= DecreaseSliderSpeed;
+
     }
 
     private string Swipe()
@@ -198,21 +202,15 @@ public class Player : MonoBehaviour {
 
     void BarsManager()
     {
-        StudySlider.value = Study;
-        SocialSlider.value = Social;
-        SleepSlider.value = Sleep;
-        if (Study > 100)
-        {
-            Study = 100;
-        }
-        if (Social > 100)
-        {
-            Social = 100;
-        }
-        if (Sleep > 100)
-        {
-            Sleep = 100;
-        }
+        Study = Mathf.Min(100, Study);
+        Social = Mathf.Min(100, Social);
+        Sleep = Mathf.Min(100, Sleep);
+        StudySlider.value = Mathf.Lerp(StudySlider.value, Study, Time.deltaTime * 3);
+        SocialSlider.value = Mathf.Lerp(SocialSlider.value, Social, Time.deltaTime * 3);
+        SleepSlider.value = Mathf.Lerp(SleepSlider.value, Sleep, Time.deltaTime * 3);
+        BarColors(StudySlider, Study);
+        BarColors(SocialSlider, Social);
+        BarColors(SleepSlider, Sleep);
     }
 
     void ScoreManager()
@@ -229,4 +227,13 @@ public class Player : MonoBehaviour {
         Spawner.Question = false;
     }
 
+    void BarColors(Slider slider, float a)
+    {
+        if (slider.value < a-1)
+            slider.transform.Find("Fill Area").Find("Fill").GetComponent<Image>().color = Color.green;
+        else if (slider.value > a+1)
+            slider.transform.Find("Fill Area").Find("Fill").GetComponent<Image>().color = Color.red;
+        else
+            slider.transform.Find("Fill Area").Find("Fill").GetComponent<Image>().color = Color.white;
+    }
 }

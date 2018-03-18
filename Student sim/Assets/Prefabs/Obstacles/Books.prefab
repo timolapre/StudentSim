@@ -913,7 +913,8 @@ MonoBehaviour:
   XorZ: 0
   Ypos: 0.5
   YRot: 270
-  ChangeValue: 0f000000fbfffffffbffffff
+  XRot: 0
+  ChangeValue: 14000000fbfffffffbffffff
   player: {fileID: 0}
 --- !u!114 &114822194760486060
 MonoBehaviour:

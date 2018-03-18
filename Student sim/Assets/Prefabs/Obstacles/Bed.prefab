@@ -592,8 +592,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 5, y: 1, z: 1}
+  m_Center: {x: 0, y: 0.5, z: 0}
 --- !u!95 &95927632180038810
 Animator:
   serializedVersion: 3
@@ -638,5 +638,6 @@ MonoBehaviour:
   XorZ: 0
   Ypos: 0
   YRot: 270
-  ChangeValue: 00000000f6ffffff0f000000
+  XRot: 0
+  ChangeValue: 00000000f6ffffff14000000
   player: {fileID: 0}

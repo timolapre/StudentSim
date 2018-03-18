@@ -13,6 +13,8 @@ public class Obstacle : MonoBehaviour {
     public float Ypos, YRot, XRot;
     public int[] ChangeValue;
 
+    private bool collected;
+
     public Player player;
     Spawner spawner;
 
@@ -52,6 +54,9 @@ public class Obstacle : MonoBehaviour {
 
         if (transform.position.z < -10)
             Destroy(gameObject);
+
+        if (collected)
+            CollectEffect();
 	}
 
     void OnTriggerEnter(Collider coll)
@@ -67,8 +72,16 @@ public class Obstacle : MonoBehaviour {
                 {
                     player.transform.Find("Main Camera").GetComponent<Camera>().DrunkEffect(5f);
                 }
+                collected = true;
             }
         }
 
+    }
+
+    void CollectEffect()
+    {
+        Vector3 NewPos = new Vector3(player.Pos-2,player.transform.position.y+3,player.transform.position.z+0.1f);
+        transform.position = Vector3.Lerp(transform.position, NewPos,Time.deltaTime*3);
+        transform.localScale = Vector3.Lerp(transform.localScale, Vector3.zero, Time.deltaTime * 5);
     }
 }
