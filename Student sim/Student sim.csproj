@@ -375,7 +375,7 @@
     <Compile Include="Assets\Scripts\Player.cs" />
     <Compile Include="Assets\Scripts\QuestionScript.cs" />
     <Compile Include="Assets\Scripts\Rotater.cs" />
-    <Compile Include="Assets\Scripts\SetHighscore.cs" />
+    <Compile Include="Assets\Scripts\SetHighscores.cs" />
     <Compile Include="Assets\Scripts\Spawner.cs" />
     <Compile Include="Assets\Scripts\Video.cs" />
   </ItemGroup>
