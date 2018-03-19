@@ -16,6 +16,7 @@ public class Player : MonoBehaviour {
 
     public Text ScoreText;
     private static int Score, Years, Months, Weeks, Days;
+    public static string GameOverBecause;
 
     private bool OnFloor;
     private float MoveTime;
@@ -138,6 +139,12 @@ public class Player : MonoBehaviour {
                 HighScore.HighScoreCheck(Score, 2, Study, Social, Sleep);
             else
                 HighScore.HighScoreCheck(Score, 1, Study, Social, Sleep);
+            if (Study <= 0)
+                GameOverBecause = "study";
+            else if (Social <= 0)
+                GameOverBecause = "social";
+            else if (Sleep <= 0)
+                GameOverBecause = "sleep";
 
             SceneManager.LoadScene("Game Over", LoadSceneMode.Single);
         }

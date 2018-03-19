@@ -101,12 +101,15 @@
      <Compile Include="Assets\Scripts\Camera.cs" />
      <Compile Include="Assets\Scripts\Destroyer.cs" />
      <Compile Include="Assets\Scripts\FloorAndHedgeSizer.cs" />
+     <Compile Include="Assets\Scripts\GameOverText.cs" />
      <Compile Include="Assets\Scripts\HighScore.cs" />
+     <Compile Include="Assets\Scripts\HighScoresforPROS.cs" />
      <Compile Include="Assets\Scripts\LightMovement.cs" />
      <Compile Include="Assets\Scripts\Obstacle.cs" />
      <Compile Include="Assets\Scripts\Player.cs" />
      <Compile Include="Assets\Scripts\QuestionScript.cs" />
      <Compile Include="Assets\Scripts\Rotater.cs" />
+     <Compile Include="Assets\Scripts\SetHighscores.cs" />
      <Compile Include="Assets\Scripts\Spawner.cs" />
      <Compile Include="Assets\Scripts\Video.cs" />
      <None Include="Assets\PostProcessing\Resources\Shaders\DepthOfField.shader" />
@@ -132,6 +135,7 @@
      <None Include="Assets\PostProcessing\Resources\Bluenoise64\LICENSE.txt" />
      <None Include="Assets\PostProcessing\Resources\Shaders\BuiltinDebugViews.shader" />
      <None Include="Assets\PostProcessing\Resources\Shaders\Common.cginc" />
+     <None Include="Assets\Highscores.txt" />
      <None Include="Assets\PostProcessing\Resources\Bluenoise64\COPYING.txt" />
      <None Include="Assets\PostProcessing\Editor Resources\UI\Trackball.shader" />
      <None Include="Assets\PostProcessing\Resources\Shaders\Bloom.cginc" />
