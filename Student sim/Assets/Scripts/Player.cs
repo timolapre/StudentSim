@@ -28,6 +28,9 @@ public class Player : MonoBehaviour {
     Animator Anim;
     int JumpHash = Animator.StringToHash("jump-up");
 
+    public AudioClip Pickup;
+    public AudioSource Source;
+
     private KeyCode[] RightKeys = new KeyCode[] { KeyCode.RightArrow, KeyCode.D };
     private KeyCode[] LeftKeys = new KeyCode[] { KeyCode.LeftArrow, KeyCode.A };
     private KeyCode[] JumpKeys = new KeyCode[] { KeyCode.Space, KeyCode.UpArrow, KeyCode.W };
@@ -36,6 +39,7 @@ public class Player : MonoBehaviour {
     void Start() {
         Anim = GetComponent<Animator>();
         spawner = transform.Find("Spawner").GetComponent<Spawner>();
+        Source.clip = Pickup;
     }
 
     // Update is called once per frame
@@ -167,7 +171,7 @@ public class Player : MonoBehaviour {
     {
         if (collision.transform.tag == "Obstacle")
             Debug.Log("HIT");
-
+            Source.Play();
     }
 
     void OnCollisionEnter(Collision coll)
