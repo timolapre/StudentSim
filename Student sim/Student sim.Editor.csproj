@@ -358,6 +358,7 @@
     <Compile Include="Assets\PostProcessing\Editor\Utils\ReflectionUtils.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\Highscores.txt" />
     <None Include="Assets\PLUGINS\TextMesh Pro\Examples &amp; Extras\Fonts\Anton OFL.txt" />
     <None Include="Assets\PLUGINS\TextMesh Pro\Examples &amp; Extras\Fonts\Bangers - OFL.txt" />
     <None Include="Assets\PLUGINS\TextMesh Pro\Examples &amp; Extras\Fonts\LiberationSans - OFL.txt" />

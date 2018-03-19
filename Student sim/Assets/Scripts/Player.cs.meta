@@ -5,7 +5,13 @@ licenseType: Free
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - StudySlider: {instanceID: 0}
+  - SocialSlider: {instanceID: 0}
+  - SleepSlider: {instanceID: 0}
+  - ScoreText: {instanceID: 0}
+  - Pickup: {fileID: 8300000, guid: 961e7039f9b639147bc7ce7bbd99b43d, type: 3}
+  - Source: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
