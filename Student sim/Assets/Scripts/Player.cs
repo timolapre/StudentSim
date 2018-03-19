@@ -69,10 +69,12 @@ public class Player : MonoBehaviour {
             else if (Pos == 0)
             {
                 if (Years == 3)
+                {
                     HighScore.HighScoreCheck(Score, 2, Study, Social, Sleep);
+                }    
                 else
                     HighScore.HighScoreCheck(Score, 1, Study, Social, Sleep);
-                SceneManager.LoadScene("Game Over", LoadSceneMode.Single);
+                SceneManager.LoadScene("FinishedGame", LoadSceneMode.Single);
             }
             Pos = 0;
             Spawner.QuestionPosZ = 100000;
