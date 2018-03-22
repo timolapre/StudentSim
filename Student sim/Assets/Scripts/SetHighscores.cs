@@ -22,12 +22,17 @@ public class SetHighscores : MonoBehaviour {
 
     public void SetHS()
     {
-        StreamWriter writer = new StreamWriter(@"C:assets\Highscores", true);
-        Output = PlayerPrefs.GetFloat("Highscore").ToString() + ":" + Name.text;
-        writer.WriteLine(Output);
-        writer.Close();
-        can1.SetActive(false);
-        Highscores.SetActive(true);
+        if (Name.text != null)
+        {
+            StreamWriter writer = new StreamWriter(@"C:assets\Highscores", true);
+            //StreamReader Reader = new StreamReader(@"C:assets\Highscores", true);
+            Output = PlayerPrefs.GetFloat("Highscore").ToString() + ":" + Name.text;
+            writer.WriteLine(Output);
+            writer.Close();
+            can1.SetActive(false);
+            Highscores.SetActive(true);
+            //Reader.Close();
+        }
     }
 
     public void ReadDB()
@@ -42,7 +47,7 @@ public class SetHighscores : MonoBehaviour {
             Text TheText = Field.transform.GetComponent<Text>();
             TheText.text = Loaded[0] + "    " + Loaded[1];
             Field.transform.parent = Highscores.transform;
-            Field.transform.position = new Vector3(300, 250 - 20 * j, 0);
+            Field.transform.position = new Vector3(600, 550 - 20 * j, 0);
             j++;
         }
         while (Text != null);
