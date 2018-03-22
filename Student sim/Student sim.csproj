@@ -368,6 +368,7 @@
     <Compile Include="Assets\Scripts\Camera.cs" />
     <Compile Include="Assets\Scripts\Destroyer.cs" />
     <Compile Include="Assets\Scripts\FloorAndHedgeSizer.cs" />
+    <Compile Include="Assets\Scripts\GameOverText.cs" />
     <Compile Include="Assets\Scripts\HighScore.cs" />
     <Compile Include="Assets\Scripts\HighScoresforPROS.cs" />
     <Compile Include="Assets\Scripts\LightMovement.cs" />
