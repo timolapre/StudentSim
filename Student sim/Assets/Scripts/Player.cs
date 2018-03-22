@@ -49,8 +49,8 @@ public class Player : MonoBehaviour {
             GetComponent<Rigidbody>().useGravity = false;
         else
             GetComponent<Rigidbody>().useGravity = true;*/
-        int minvalue = 5, increaseevery = 80;
-        GameSpeed = Mathf.Min(13,Mathf.Max(minvalue,((int)transform.position.z+increaseevery*minvalue)/increaseevery));
+        int minvalue = 5, increaseevery = 100;
+        GameSpeed = Mathf.Min(10,Mathf.Max(minvalue,((int)transform.position.z+increaseevery*minvalue)/increaseevery));
         //GameSpeed = Mathf.Min(13, Mathf.Max(minvalue,(int)Mathf.Sqrt(1.8f * Mathf.Pow(transform.position.z, 0.8f))));
 
         if (transform.position.z >= Spawner.QuestionPosZ)
@@ -135,8 +135,11 @@ public class Player : MonoBehaviour {
 
         if (Study <= 0 || Social <= 0 || Sleep <= 0 || Years == 3)
         {
-            if(Years == 3)
+            if (Years == 3)
+            {
+                GameOverBecause = "finish";
                 HighScore.HighScoreCheck(Score, 2, Study, Social, Sleep);
+            }
             else
                 HighScore.HighScoreCheck(Score, 1, Study, Social, Sleep);
             if (Study <= 0)

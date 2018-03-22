@@ -31,8 +31,11 @@ public class Obstacle : MonoBehaviour {
             transform.eulerAngles = new Vector3(XRot, YRot, 0);
         }
         else if (XorZ == 1)
-            transform.position = new Vector3(transform.position.x, Ypos, Spawner.FloorSpawnID * spawner.Multiplier + Random.Range(-1, 2) - spawner.RenderDistance*spawner.Multiplier);
-
+        {
+            transform.position = new Vector3(transform.position.x, Ypos, Spawner.FloorSpawnID * spawner.Multiplier + Random.Range(-1, 2) - spawner.RenderDistance * spawner.Multiplier);
+            if(XRot != 0)
+                transform.eulerAngles = new Vector3(XRot, transform.rotation.y, 0);
+        }
         /*Renderer renderer = GetComponent<Renderer>();
         if (ID == 1)
             renderer.material.color = Color.blue;

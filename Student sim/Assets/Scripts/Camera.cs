@@ -20,7 +20,13 @@ public class Camera : MonoBehaviour {
         SleepySettings = profile.vignette.settings;
         DrunkSettings = profile.depthOfField.settings;
         DrunkSettingsBlur = profile.motionBlur.settings;
-	}
+
+        DrunkSettings.focalLength = 1;
+        profile.depthOfField.settings = DrunkSettings;
+        DrunkSettingsBlur.frameBlending = 0;
+        DrunkSettingsBlur.shutterAngle = 0;
+        profile.motionBlur.settings = DrunkSettingsBlur;
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -32,7 +38,6 @@ public class Camera : MonoBehaviour {
 
     public void DrunkEffect(float time)
     {
-        print("drunk");
         DrunkSettings.focalLength = 15;
         profile.depthOfField.settings= DrunkSettings;
         DrunkSettingsBlur.frameBlending = 32;

@@ -8,7 +8,8 @@ public class Spawner : MonoBehaviour
 
     public static int QuestionPosZ = 1000;
 
-    public int Multiplier = 5, RenderDistance = 10, QuestionAfter = 20, ShowQuestionAfterDistance = 5;
+    public int Multiplier = 5, RenderDistance = 10, QuestionAfter = 20, ShowQuestionAfterDistance = 5, InfoEvery = 5;
+    private int InfoMult, InfoCount;
 
     public GameObject[] Obstacle;
     public GameObject Floor, Hedge, QuestionObject;
@@ -33,6 +34,7 @@ public class Spawner : MonoBehaviour
         //InvokeRepeating("SpawnObject", 0, 1f);
         //InvokeRepeating("SpawnQuestion", 0, 10);
         Rotater = player.transform.Find("Rotater").gameObject;
+        StopQuestion();
     }
 
     // Update is called once per frame
@@ -58,13 +60,13 @@ public class Spawner : MonoBehaviour
         if (Question)
         {
             int dist = FloorSpawnID;
-            if (QuestionPosZ < player.transform.position.z + Multiplier * ShowQuestionAfterDistance && WhatQuestion == 0)
+            //Debug.Log(QuestionPosZ + " " + player.transform.position.z + Multiplier * ShowQuestionAfterDistance);
+            if (QuestionPosZ - Multiplier * ShowQuestionAfterDistance < player.transform.position.z)
             {
-                WhatQuestion = Random.Range(0, questions.Length);
                 ShowQuestions(WhatQuestion);
             }
         }
-        else
+        else if (SpawnLevel == false)
         {
             SpawnLevel = true;
             StopQuestion();
@@ -146,6 +148,13 @@ public class Spawner : MonoBehaviour
             }
             QuestionCount = 0;
         }
+
+        if (QuestionPosZ - Multiplier * InfoEvery * InfoMult - (ShowQuestionAfterDistance * Multiplier) < player.transform.position.z)
+        {
+            Debug.Log("InfoMult = " + InfoMult);
+            ShowInfo(InfoMult-1);
+            InfoMult--;
+        }
     }
 
     void SpawnObject()
@@ -187,7 +196,7 @@ public class Spawner : MonoBehaviour
     [System.Serializable]
     public struct Questions
     {
-        public string question;
+        public string[] info;
         public string answer1;
         public string answer2;
         public int[] Changes;
@@ -196,29 +205,48 @@ public class Spawner : MonoBehaviour
     void ShowQuestions(int i)
     {
         QuestionCanvas.GetComponent<CanvasGroup>().alpha = 1;
-        QuestionText.text = questions[i - 1].question;
-        Answer1Text.text = questions[i - 1].answer1;
-        Answer2Text.text = questions[i - 1].answer2;
+        QuestionText.text ="";
+        Answer1Text.text = questions[i].answer1;
+        Answer2Text.text = questions[i].answer2;
+    }
+
+    void ShowInfo(int i)
+    {
+        if (i >= 0)
+        {
+            QuestionCanvas.GetComponent<CanvasGroup>().alpha = 1;
+            QuestionText.text = questions[WhatQuestion].info[i];
+            Answer1Text.text = "";
+            Answer2Text.text = "";
+        }
     }
 
     void StopQuestion()
     {
         QuestionCanvas.GetComponent<CanvasGroup>().alpha = 0;
+        GetQuestionInfo();
+    }
+
+    void GetQuestionInfo()
+    {
+        WhatQuestion = Random.Range(0, questions.Length);
+        InfoCount = questions[WhatQuestion].info.Length;
+        InfoMult = InfoCount;
     }
 
     public void ChangeValues(string moveto)
     {
         if (moveto == "left")
         {
-            player.Study += questions[WhatQuestion - 1].Changes[0];
-            player.Social += questions[WhatQuestion - 1].Changes[1];
-            player.Sleep += questions[WhatQuestion - 1].Changes[2];
+            player.Study += questions[WhatQuestion].Changes[0];
+            player.Social += questions[WhatQuestion].Changes[1];
+            player.Sleep += questions[WhatQuestion].Changes[2];
         }
         if (moveto == "right")
         {
-            player.Study += questions[WhatQuestion - 1].Changes[3];
-            player.Social += questions[WhatQuestion - 1].Changes[4];
-            player.Sleep += questions[WhatQuestion - 1].Changes[5];
+            player.Study += questions[WhatQuestion].Changes[3];
+            player.Social += questions[WhatQuestion].Changes[4];
+            player.Sleep += questions[WhatQuestion].Changes[5];
         }
     }
 }
