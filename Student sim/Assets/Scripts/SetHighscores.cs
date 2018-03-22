@@ -11,7 +11,7 @@ public class SetHighscores : MonoBehaviour {
     private GameObject Field;
     public InputField Name;
     string Text;
-    string[] Loaded;
+    public string[] Loaded;
     int Lines, j;
 
     private void Start()
@@ -47,7 +47,8 @@ public class SetHighscores : MonoBehaviour {
             Text TheText = Field.transform.GetComponent<Text>();
             TheText.text = Loaded[0] + "    " + Loaded[1];
             Field.transform.parent = Highscores.transform;
-            Field.transform.position = new Vector3(600, 550 - 20 * j, 0);
+            Field.transform.localScale = new Vector3(1, 1, 1);
+            Field.transform.localPosition = new Vector3(0, 100 - 23 * j, 0);
             j++;
         }
         while (Text != null);

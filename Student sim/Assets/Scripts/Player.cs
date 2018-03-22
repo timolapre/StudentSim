@@ -75,7 +75,6 @@ public class Player : MonoBehaviour {
                 }    
                 else
                     HighScore.HighScoreCheck(Score, 1, Study, Social, Sleep);
-                SceneManager.LoadScene("FinishedGame", LoadSceneMode.Single);
             }
             Pos = 0;
             Spawner.QuestionPosZ = 100000;
@@ -139,17 +138,21 @@ public class Player : MonoBehaviour {
             {
                 GameOverBecause = "finish";
                 HighScore.HighScoreCheck(Score, 2, Study, Social, Sleep);
+                SceneManager.LoadScene("FinishedGame", LoadSceneMode.Single);
             }
             else
+            {
                 HighScore.HighScoreCheck(Score, 1, Study, Social, Sleep);
-            if (Study <= 0)
-                GameOverBecause = "study";
-            else if (Social <= 0)
-                GameOverBecause = "social";
-            else if (Sleep <= 0)
-                GameOverBecause = "sleep";
 
-            SceneManager.LoadScene("Game Over", LoadSceneMode.Single);
+                if (Study <= 0)
+                    GameOverBecause = "study";
+                else if (Social <= 0)
+                    GameOverBecause = "social";
+                else if (Sleep <= 0)
+                    GameOverBecause = "sleep";
+
+                SceneManager.LoadScene("Game Over", LoadSceneMode.Single);
+            }
         }
 
         Study -= DecreaseSliderSpeed;
