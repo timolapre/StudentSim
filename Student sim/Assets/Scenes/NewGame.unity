@@ -905,7 +905,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 100
   m_WholeNumbers: 0
-  m_Value: 60
+  m_Value: 70
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -1972,9 +1972,9 @@ MonoBehaviour:
   GameSpeed: 5
   GameRotation: 0
   Rotating: 0
-  Study: 60
-  Social: 60
-  Sleep: 60
+  Study: 70
+  Social: 70
+  Sleep: 70
   DecreaseSliderSpeed: 0.02
   StudySlider: {fileID: 243722518}
   SocialSlider: {fileID: 1767558734}
@@ -2122,7 +2122,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 100
   m_WholeNumbers: 0
-  m_Value: 60
+  m_Value: 70
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -3843,7 +3843,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 100
   m_WholeNumbers: 0
-  m_Value: 60
+  m_Value: 70
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []

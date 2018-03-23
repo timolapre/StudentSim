@@ -74,7 +74,6 @@ public class Obstacle : MonoBehaviour {
                 if(transform.name.Contains("Beer"))
                 {
                     Player.Beers++;
-                    Debug.Log("BEers: " + Player.Beers);
                     if (Player.Beers >= 3)
                     {
                         player.transform.Find("Main Camera").GetComponent<Camera>().DrunkEffect(5f);

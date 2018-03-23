@@ -265,6 +265,5 @@ public class Player : MonoBehaviour {
     {
         if (Beers > 0)
             Beers--;
-        Debug.Log(Beers);
     }
 }
