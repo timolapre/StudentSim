@@ -9,6 +9,7 @@ public class GameOverText : MonoBehaviour {
     private string SocialText = "Research finds that lonely students often are more viable to be unhappy, and in some cases they are more viable for depression. Student life offers a lot of possibilities to meet new people who are a lot like you. Don’t forget to get out there and meet some friends! A few beers in the pub with your mates once in a while can’t do a lot of harm! Also, don’t forget to see your parents once in a while!";
     private string SleepText = "Sleep is one of the most important primary needs. Without sleep, our senses become dulled and we ourselves become less immune to stress and diseases. Less sleep means our focus and concentration takes some hits as well. One of the primary causes of anxiety and depression among students is the amount of stress they experience. Make sure you get enough sleep, so that your body learns how to cope with all the pressures of student life!";
     private string FinishText = "Congratulations!!!";
+    private string NoChoice = "Not making a decision: Making decisions isn’t very easy to do. However, in real life you always have to somehow make a decision, whether it’s a big or small one. This is why you can’t just stay in the middle when you have to make a decision in the game. You’re forced to pick a side, either left or right. Don’t hang in the middle!";
 
     // Use this for initialization
     void Start () {
@@ -25,6 +26,8 @@ public class GameOverText : MonoBehaviour {
             return SleepText;
         if (i == "finish")
             return FinishText;
+        if (i == "nochoice")
+            return NoChoice;
         return "ERROR, text not found";
     }
 	

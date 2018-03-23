@@ -71,9 +71,15 @@ public class Obstacle : MonoBehaviour {
                 player.Study += ChangeValue[0];
                 player.Social += ChangeValue[1];
                 player.Sleep += ChangeValue[2];
-                if(transform.name.Contains("Beer") && Random.Range(0,3) == 0)
+                if(transform.name.Contains("Beer"))
                 {
-                    player.transform.Find("Main Camera").GetComponent<Camera>().DrunkEffect(5f);
+                    Player.Beers++;
+                    Debug.Log("BEers: " + Player.Beers);
+                    if (Player.Beers >= 3)
+                    {
+                        player.transform.Find("Main Camera").GetComponent<Camera>().DrunkEffect(5f);
+                        Player.Beers = 0;
+                    }
                 }
                 collected = true;
             }
@@ -87,4 +93,4 @@ public class Obstacle : MonoBehaviour {
         transform.position = Vector3.Lerp(transform.position, NewPos,Time.deltaTime*3);
         transform.localScale = Vector3.Lerp(transform.localScale, Vector3.zero, Time.deltaTime * 5);
     }
-}
+} 

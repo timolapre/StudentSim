@@ -15,6 +15,7 @@ public class Player : MonoBehaviour {
     public Slider StudySlider, SocialSlider, SleepSlider;
 
     public Text ScoreText;
+    public static int Beers;
     private static int Score, Years, Months, Weeks, Days;
     public static string GameOverBecause;
 
@@ -38,6 +39,7 @@ public class Player : MonoBehaviour {
 
     // Use this for initialization
     void Start() {
+        InvokeRepeating("MinusBeers", 0, 12);
         Anim = GetComponent<Animator>();
         spawner = transform.Find("Spawner").GetComponent<Spawner>();
         Source.clip = Pickup;
@@ -75,6 +77,9 @@ public class Player : MonoBehaviour {
                 }    
                 else
                     HighScore.HighScoreCheck(Score, 1, Study, Social, Sleep);
+
+                GameOverBecause = "nochoice";
+                SceneManager.LoadScene("Game Over", LoadSceneMode.Single);
             }
             Pos = 0;
             Spawner.QuestionPosZ = 100000;
@@ -254,5 +259,12 @@ public class Player : MonoBehaviour {
             slider.transform.Find("Fill Area").Find("Fill").GetComponent<Image>().color = Color.red;
         else
             slider.transform.Find("Fill Area").Find("Fill").GetComponent<Image>().color = Color.white;
+    }
+
+    void MinusBeers()
+    {
+        if (Beers > 0)
+            Beers--;
+        Debug.Log(Beers);
     }
 }

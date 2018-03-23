@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class Spawner : MonoBehaviour
 {
@@ -22,6 +23,7 @@ public class Spawner : MonoBehaviour
     private bool SpawnLevel = true;
 
     GameObject Rotater;
+    public GameObject Arrow1, Arrow2, redx;
 
     public int WhatQuestion = 0;
     public Canvas QuestionCanvas;
@@ -151,7 +153,6 @@ public class Spawner : MonoBehaviour
 
         if (QuestionPosZ - Multiplier * InfoEvery * InfoMult - (ShowQuestionAfterDistance * Multiplier) < player.transform.position.z)
         {
-            Debug.Log("InfoMult = " + InfoMult);
             ShowInfo(InfoMult-1);
             InfoMult--;
         }
@@ -208,6 +209,9 @@ public class Spawner : MonoBehaviour
         QuestionText.text ="";
         Answer1Text.text = questions[i].answer1;
         Answer2Text.text = questions[i].answer2;
+        Arrow1.GetComponent<Image>().color = new Color(1,1,1,1);
+        Arrow2.GetComponent<Image>().color = new Color(1, 1, 1, 1);
+        redx.GetComponent<Image>().color = new Color(1, 1, 1, 1);
     }
 
     void ShowInfo(int i)
@@ -224,6 +228,9 @@ public class Spawner : MonoBehaviour
     void StopQuestion()
     {
         QuestionCanvas.GetComponent<CanvasGroup>().alpha = 0;
+        Arrow1.GetComponent<Image>().color = new Color(1, 1, 1, 0);
+        Arrow2.GetComponent<Image>().color = new Color(1, 1, 1, 0);
+        redx.GetComponent<Image>().color = new Color(1, 1, 1, 0);
         GetQuestionInfo();
     }
 
