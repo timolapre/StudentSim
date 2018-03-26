@@ -21,10 +21,14 @@ MonoBehaviour:
   m_Title: 
   m_RootView: {fileID: 2}
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_MinSize: {x: 950, y: 521}
 =======
   m_MinSize: {x: 950, y: 542}
 >>>>>>> fe2d3d887c8d49e60b525e37a9824228a2de5123
+=======
+  m_MinSize: {x: 950, y: 300}
+>>>>>>> parent of 1bdab23a... added game over info
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -48,11 +52,15 @@ MonoBehaviour:
     width: 1536
 <<<<<<< HEAD
     height: 781
+<<<<<<< HEAD
   m_MinSize: {x: 950, y: 521}
 =======
     height: 821
   m_MinSize: {x: 950, y: 542}
 >>>>>>> fe2d3d887c8d49e60b525e37a9824228a2de5123
+=======
+  m_MinSize: {x: 950, y: 300}
+>>>>>>> parent of 1bdab23a... added game over info
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &3
 MonoBehaviour:
@@ -116,9 +124,10 @@ MonoBehaviour:
     width: 1536
 <<<<<<< HEAD
     height: 731
-  m_MinSize: {x: 881, y: 471}
-  m_MaxSize: {x: 16006, y: 14021}
+  m_MinSize: {x: 887, y: 492}
+  m_MaxSize: {x: 16012, y: 14042}
   vertical: 0
+<<<<<<< HEAD
   controlID: 224
 =======
     height: 771
@@ -127,6 +136,9 @@ MonoBehaviour:
   vertical: 0
   controlID: 716
 >>>>>>> fe2d3d887c8d49e60b525e37a9824228a2de5123
+=======
+  controlID: 77
+>>>>>>> parent of 1bdab23a... added game over info
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -146,11 +158,16 @@ MonoBehaviour:
     x: 0
     y: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     width: 1237
+=======
+    width: 1224
+>>>>>>> parent of 1bdab23a... added game over info
     height: 731
-  m_MinSize: {x: 606, y: 471}
-  m_MaxSize: {x: 12006, y: 14021}
+  m_MinSize: {x: 610, y: 492}
+  m_MaxSize: {x: 12010, y: 14042}
   vertical: 1
+<<<<<<< HEAD
   controlID: 322
 =======
     width: 1224
@@ -160,6 +177,9 @@ MonoBehaviour:
   vertical: 1
   controlID: 669
 >>>>>>> fe2d3d887c8d49e60b525e37a9824228a2de5123
+=======
+  controlID: 78
+>>>>>>> parent of 1bdab23a... added game over info
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -180,6 +200,7 @@ MonoBehaviour:
     x: 0
     y: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     width: 1237
     height: 460
   m_MinSize: {x: 606, y: 221}
@@ -194,6 +215,14 @@ MonoBehaviour:
   vertical: 0
   controlID: 670
 >>>>>>> fe2d3d887c8d49e60b525e37a9824228a2de5123
+=======
+    width: 1224
+    height: 454
+  m_MinSize: {x: 610, y: 221}
+  m_MaxSize: {x: 12010, y: 4021}
+  vertical: 0
+  controlID: 79
+>>>>>>> parent of 1bdab23a... added game over info
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -211,12 +240,17 @@ MonoBehaviour:
     x: 0
     y: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     width: 231
     height: 460
 =======
     width: 226
     height: 478
 >>>>>>> fe2d3d887c8d49e60b525e37a9824228a2de5123
+=======
+    width: 226
+    height: 454
+>>>>>>> parent of 1bdab23a... added game over info
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 14}
@@ -238,8 +272,9 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 231
+    x: 226
     y: 0
+<<<<<<< HEAD
 <<<<<<< HEAD
     width: 505
     height: 460
@@ -247,6 +282,10 @@ MonoBehaviour:
     width: 524
     height: 478
 >>>>>>> fe2d3d887c8d49e60b525e37a9824228a2de5123
+=======
+    width: 524
+    height: 454
+>>>>>>> parent of 1bdab23a... added game over info
   m_MinSize: {x: 204, y: 221}
   m_MaxSize: {x: 4004, y: 4021}
   m_ActualView: {fileID: 13}
@@ -268,8 +307,9 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 736
+    x: 750
     y: 0
+<<<<<<< HEAD
 <<<<<<< HEAD
     width: 501
     height: 460
@@ -277,6 +317,10 @@ MonoBehaviour:
     width: 474
     height: 478
 >>>>>>> fe2d3d887c8d49e60b525e37a9824228a2de5123
+=======
+    width: 474
+    height: 454
+>>>>>>> parent of 1bdab23a... added game over info
   m_MinSize: {x: 204, y: 221}
   m_MaxSize: {x: 4004, y: 4021}
   m_ActualView: {fileID: 15}
@@ -303,6 +347,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     y: 460
     width: 1237
     height: 271
@@ -311,6 +356,11 @@ MonoBehaviour:
     width: 1224
     height: 293
 >>>>>>> fe2d3d887c8d49e60b525e37a9824228a2de5123
+=======
+    y: 454
+    width: 1224
+    height: 277
+>>>>>>> parent of 1bdab23a... added game over info
   m_MinSize: {x: 232, y: 271}
   m_MaxSize: {x: 10002, y: 10021}
   m_ActualView: {fileID: 20}
@@ -333,10 +383,14 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 1237
+    x: 1224
     y: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     width: 299
+=======
+    width: 312
+>>>>>>> parent of 1bdab23a... added game over info
     height: 731
 =======
     width: 312
@@ -372,8 +426,9 @@ MonoBehaviour:
   m_DepthBufferBits: 32
   m_Pos:
     serializedVersion: 2
-    x: 233
+    x: 228
     y: 92
+<<<<<<< HEAD
 <<<<<<< HEAD
     width: 501
     height: 439
@@ -381,8 +436,12 @@ MonoBehaviour:
     width: 520
     height: 457
 >>>>>>> fe2d3d887c8d49e60b525e37a9824228a2de5123
+=======
+    width: 520
+    height: 433
+>>>>>>> parent of 1bdab23a... added game over info
   m_PersistentViewDataDictionary: {fileID: 0}
-  m_MaximizeOnPlay: 1
+  m_MaximizeOnPlay: 0
   m_Gizmos: 0
   m_Stats: 0
   m_SelectedSizes: 0500000000000000050000000f000000000000000000000000000000000000000000000000000000
@@ -390,10 +449,10 @@ MonoBehaviour:
   m_ZoomArea:
     m_HRangeLocked: 0
     m_VRangeLocked: 0
-    m_HBaseRangeMin: -250.5
-    m_HBaseRangeMax: 250.5
-    m_VBaseRangeMin: -140.90625
-    m_VBaseRangeMax: 140.90625
+    m_HBaseRangeMin: -260
+    m_HBaseRangeMax: 260
+    m_VBaseRangeMin: -146.25
+    m_VBaseRangeMax: 146.25
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -411,6 +470,7 @@ MonoBehaviour:
       x: 0
       y: 17
 <<<<<<< HEAD
+<<<<<<< HEAD
       width: 501
       height: 422
     m_Scale: {x: 1, y: 1}
@@ -421,12 +481,19 @@ MonoBehaviour:
     m_Scale: {x: 1, y: 1}
     m_Translation: {x: 260, y: 220}
 >>>>>>> fe2d3d887c8d49e60b525e37a9824228a2de5123
+=======
+      width: 520
+      height: 416
+    m_Scale: {x: 1, y: 1}
+    m_Translation: {x: 260, y: 208}
+>>>>>>> parent of 1bdab23a... added game over info
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
+<<<<<<< HEAD
 <<<<<<< HEAD
       x: -250.5
       y: -211
@@ -438,15 +505,25 @@ MonoBehaviour:
       width: 520
       height: 440
 >>>>>>> fe2d3d887c8d49e60b525e37a9824228a2de5123
+=======
+      x: -260
+      y: -208
+      width: 520
+      height: 416
+>>>>>>> parent of 1bdab23a... added game over info
     m_MinimalGUI: 1
   m_defaultScale: 1
   m_TargetTexture: {fileID: 0}
   m_CurrentColorSpace: 1
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_LastWindowPixelSize: {x: 501, y: 439}
 =======
   m_LastWindowPixelSize: {x: 520, y: 457}
 >>>>>>> fe2d3d887c8d49e60b525e37a9824228a2de5123
+=======
+  m_LastWindowPixelSize: {x: 520, y: 433}
+>>>>>>> parent of 1bdab23a... added game over info
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000100000100
@@ -475,36 +552,45 @@ MonoBehaviour:
     x: 0
     y: 92
 <<<<<<< HEAD
+<<<<<<< HEAD
     width: 229
     height: 439
 =======
     width: 224
     height: 457
 >>>>>>> fe2d3d887c8d49e60b525e37a9824228a2de5123
+=======
+    width: 224
+    height: 433
+>>>>>>> parent of 1bdab23a... added game over info
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 7a2c0000
+    m_SelectedIDs: 
     m_LastClickedID: 0
+<<<<<<< HEAD
 <<<<<<< HEAD
     m_ExpandedIDs: 44f6ffff9efbffff00000000
 =======
     m_ExpandedIDs: 6aefffff96fbffff00000000
 >>>>>>> fe2d3d887c8d49e60b525e37a9824228a2de5123
+=======
+    m_ExpandedIDs: c669e7ff708fe7ff622de8ffd84ae9ff7cc9e9ff2ccee9ff02d0e9ff9656f9fff676fdff9efbffff00000000fe3100006e3200008e320000b6a80000d4a80000e8a80000c6aa000010be000046be000052be00006cbe0000fec5000040c600005ac60000
+>>>>>>> parent of 1bdab23a... added game over info
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
+      m_Name: Text(Clone)
+      m_OriginalName: Text(Clone)
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 0
+      m_UserData: -1624170
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 11
+      m_OriginalEventType: 0
       m_IsRenamingFilename: 0
       m_ClientGUIView: {fileID: 8}
     m_SearchString: 
@@ -535,8 +621,9 @@ MonoBehaviour:
   m_DepthBufferBits: 32
   m_Pos:
     serializedVersion: 2
-    x: 738
+    x: 752
     y: 92
+<<<<<<< HEAD
 <<<<<<< HEAD
     width: 497
     height: 439
@@ -544,16 +631,20 @@ MonoBehaviour:
     width: 470
     height: 457
 >>>>>>> fe2d3d887c8d49e60b525e37a9824228a2de5123
+=======
+    width: 470
+    height: 433
+>>>>>>> parent of 1bdab23a... added game over info
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SceneLighting: 1
-  lastFramingTime: 123.85271997702323
+  lastFramingTime: 18166.278422188534
   m_2DMode: 0
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 0.5107984, y: 1.8743775, z: 0.08757019}
+    m_Target: {x: 376.05307, y: 251.71146, z: 397.6983}
     speed: 2
-    m_Value: {x: 0.5107984, y: 1.8743775, z: 0.08757019}
+    m_Value: {x: 376.05307, y: 251.71146, z: 397.6983}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -577,17 +668,21 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: -0.041972276, y: -0.027566032, z: 0.001158449, w: -0.9987378}
+    m_Target: {x: 0.025442299, y: 0.06533788, z: 0.0016663794, w: -0.99753743}
     speed: 2
+<<<<<<< HEAD
 <<<<<<< HEAD
     m_Value: {x: -0.041972276, y: -0.027566032, z: 0.001158449, w: -0.9987378}
 =======
     m_Value: {x: 0.025442297, y: 0.06533788, z: 0.0016663794, w: -0.99753743}
 >>>>>>> fe2d3d887c8d49e60b525e37a9824228a2de5123
+=======
+    m_Value: {x: 0.025442299, y: 0.06533788, z: 0.0016663794, w: -0.99753743}
+>>>>>>> parent of 1bdab23a... added game over info
   m_Size:
-    m_Target: 20.03753
+    m_Target: 1226.6332
     speed: 2
-    m_Value: 20.03753
+    m_Value: 1226.6332
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -773,6 +868,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     y: 552
     width: 1235
     height: 250
@@ -781,6 +877,11 @@ MonoBehaviour:
     width: 1222
     height: 272
 >>>>>>> fe2d3d887c8d49e60b525e37a9824228a2de5123
+=======
+    y: 546
+    width: 1222
+    height: 256
+>>>>>>> parent of 1bdab23a... added game over info
   m_PersistentViewDataDictionary: {fileID: 0}
 --- !u!114 &20
 MonoBehaviour:
@@ -806,6 +907,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     y: 552
     width: 1235
     height: 250
@@ -814,6 +916,11 @@ MonoBehaviour:
     width: 1222
     height: 272
 >>>>>>> fe2d3d887c8d49e60b525e37a9824228a2de5123
+=======
+    y: 546
+    width: 1222
+    height: 256
+>>>>>>> parent of 1bdab23a... added game over info
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SearchFilter:
     m_NameFilter: 
@@ -828,6 +935,7 @@ MonoBehaviour:
     m_SearchArea: 0
     m_Folders:
 <<<<<<< HEAD
+<<<<<<< HEAD
     - Assets/Scenes
   m_ViewMode: 1
   m_StartGridSize: 45
@@ -840,10 +948,18 @@ MonoBehaviour:
   m_LastFolders:
   - Assets/Videos
 >>>>>>> fe2d3d887c8d49e60b525e37a9824228a2de5123
+=======
+    - Assets
+  m_ViewMode: 1
+  m_StartGridSize: 45
+  m_LastFolders:
+  - Assets
+>>>>>>> parent of 1bdab23a... added game over info
   m_LastFoldersGridSize: 45
   m_LastProjectPath: C:\Users\timgo\Documents\GitHub\StudentSim\Student sim
   m_IsLocked: 0
   m_FolderTreeState:
+<<<<<<< HEAD
 <<<<<<< HEAD
     scrollPos: {x: 0, y: 43}
     m_SelectedIDs: 0c2c0000
@@ -855,6 +971,12 @@ MonoBehaviour:
     m_LastClickedID: 11452
     m_ExpandedIDs: 000000004c2b0000d42c0000362e0000562e000000ca9a3bffffff7f
 >>>>>>> fe2d3d887c8d49e60b525e37a9824228a2de5123
+=======
+    scrollPos: {x: 0, y: 11}
+    m_SelectedIDs: 8a290000
+    m_LastClickedID: 10634
+    m_ExpandedIDs: 000000008a290000122b00006e2c00008e2c000000ca9a3bffffff7f
+>>>>>>> parent of 1bdab23a... added game over info
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -883,10 +1005,14 @@ MonoBehaviour:
     m_SelectedIDs: 
     m_LastClickedID: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_ExpandedIDs: 000000008a290000122b0000742c0000942c000000ca9a3bffffff7f
 =======
     m_ExpandedIDs: 000000004c2b0000d42c0000362e0000562e000000ca9a3bffffff7f
 >>>>>>> fe2d3d887c8d49e60b525e37a9824228a2de5123
+=======
+    m_ExpandedIDs: 000000008a290000122b00006e2c00008e2c0000
+>>>>>>> parent of 1bdab23a... added game over info
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -913,12 +1039,17 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
+<<<<<<< HEAD
     m_HadKeyboardFocusLastEvent: 0
 <<<<<<< HEAD
     m_ExpandedInstanceIDs: c62300001a3a0000863a0000fa3e0000362c00005427000056270000345b0000385b0000d8270000c028000000000000e447faffee1df9ffda56f7ff502c0000
 =======
     m_ExpandedInstanceIDs: c62300001a3a0000863a0000fa3e0000362c00005427000056270000345b0000385b0000d8270000c028000000000000e447faffee1df9ffda56f7ff
 >>>>>>> fe2d3d887c8d49e60b525e37a9824228a2de5123
+=======
+    m_HadKeyboardFocusLastEvent: 1
+    m_ExpandedInstanceIDs: c62300001a3a0000863a0000fa3e0000362c00005427000056270000345b0000385b0000d8270000c028000000000000e447faffee1df9ffda56f7ff
+>>>>>>> parent of 1bdab23a... added game over info
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -967,10 +1098,14 @@ MonoBehaviour:
   m_DepthBufferBits: 0
   m_Pos:
     serializedVersion: 2
-    x: 1239
+    x: 1226
     y: 92
 <<<<<<< HEAD
+<<<<<<< HEAD
     width: 297
+=======
+    width: 310
+>>>>>>> parent of 1bdab23a... added game over info
     height: 710
 =======
     width: 310

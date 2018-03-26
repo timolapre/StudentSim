@@ -152,7 +152,7 @@ MonoBehaviour:
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 1
+    m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: '
@@ -709,7 +709,7 @@ Prefab:
     - target: {fileID: 224407694926801396, guid: db4b39c462499a74387ea548f33cf93a,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 500
+      value: 160
       objectReference: {fileID: 0}
     - target: {fileID: 224407694926801396, guid: db4b39c462499a74387ea548f33cf93a,
         type: 2}
