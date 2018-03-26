@@ -3,8 +3,16 @@
 48.9949:Sim
 36.55202:Lisa
 59.45533:Test
+<<<<<<< HEAD
+<<<<<<< HEAD
+67.50226:Sim65.8423:Tmio
+=======
 67.50226:Sim74.0892:sa
 74.0892:das
 74.0892:sd
 74.0892:d
 68.53781:tim
+>>>>>>> fe2d3d887c8d49e60b525e37a9824228a2de5123
+=======
+67.50226:Sim
+>>>>>>> parent of 1bdab23a... added game over info
