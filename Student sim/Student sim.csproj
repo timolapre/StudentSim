@@ -363,6 +363,7 @@
     <Compile Include="Assets\PostProcessing\Runtime\Utils\MaterialFactory.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Utils\RenderTextureFactory.cs" />
     <Compile Include="Assets\PostProcessing\Utilities\CustomMotionTexture\ExampleWheelController.cs" />
+    <Compile Include="Assets\Scripts\Arrows.cs" />
     <Compile Include="Assets\Scripts\bars.cs" />
     <Compile Include="Assets\Scripts\ButtonsUI.cs" />
     <Compile Include="Assets\Scripts\Camera.cs" />
@@ -376,6 +377,7 @@
     <Compile Include="Assets\Scripts\Player.cs" />
     <Compile Include="Assets\Scripts\QuestionScript.cs" />
     <Compile Include="Assets\Scripts\Rotater.cs" />
+    <Compile Include="Assets\Scripts\Scroller.cs" />
     <Compile Include="Assets\Scripts\SetHighscores.cs" />
     <Compile Include="Assets\Scripts\Spawner.cs" />
     <Compile Include="Assets\Scripts\Video.cs" />
