@@ -52,6 +52,10 @@ public class Player : MonoBehaviour {
         else
             GetComponent<Rigidbody>().useGravity = true;*/
         int minvalue = 5, increaseevery = 100;
+        if (Input.GetKey(KeyCode.L))
+            GameSpeed = 0;
+        if (Input.GetKeyDown(KeyCode.K))
+            GameSpeed = 5;
         GameSpeed = Mathf.Min(10,Mathf.Max(minvalue,((int)transform.position.z+increaseevery*minvalue)/increaseevery));
         //GameSpeed = Mathf.Min(13, Mathf.Max(minvalue,(int)Mathf.Sqrt(1.8f * Mathf.Pow(transform.position.z, 0.8f))));
 
