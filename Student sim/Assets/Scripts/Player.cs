@@ -160,9 +160,9 @@ public class Player : MonoBehaviour {
             }
         }
 
-        Study -= DecreaseSliderSpeed;
-        Social -= DecreaseSliderSpeed;
-        Sleep -= DecreaseSliderSpeed;
+        Study -= DecreaseSliderSpeed * Time.deltaTime;
+        Social -= DecreaseSliderSpeed * Time.deltaTime;
+        Sleep -= DecreaseSliderSpeed * Time.deltaTime;
 
     }
 
