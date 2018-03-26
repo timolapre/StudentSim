@@ -1436,6 +1436,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   id: 1
 =======
 --- !u!1 &1681276013
@@ -1548,6 +1549,8 @@ Transform:
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 >>>>>>> fe2d3d887c8d49e60b525e37a9824228a2de5123
+=======
+>>>>>>> parent of 1bdab23a... added game over info
 =======
 >>>>>>> parent of 1bdab23a... added game over info
 --- !u!1 &1807056189
@@ -1808,11 +1811,16 @@ MonoBehaviour:
   m_Direction: 0
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_Value: 1
 =======
   m_Value: 0
 >>>>>>> fe2d3d887c8d49e60b525e37a9824228a2de5123
   m_Size: 1
+=======
+  m_Value: 0
+  m_Size: 0.99999994
+>>>>>>> parent of 1bdab23a... added game over info
 =======
   m_Value: 0
   m_Size: 0.99999994

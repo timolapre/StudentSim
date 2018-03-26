@@ -306,6 +306,7 @@ afc52d27c3ec0bd47909e81bd45fbffa Assembly-CSharp-firstpass.dll:TMPro.TMP_TextEve
 af7666733efcc974926d7d470e1732a6 Assembly-CSharp-firstpass.dll:TMPro.Examples.SkewTextExample
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 2b5bd81c259c691324a17af9a3e97e85 Assembly-CSharp.dll:.Arrows
 =======
 26215f135eeb48d8fa1189498c107f6c Vuforia.UnityExtensions.dll:Vuforia.AnchorBehaviour
@@ -380,6 +381,8 @@ d2a2bd333db22f480a8589e167314ecc Vuforia.UnityExtensions.dll:Vuforia.UserDefined
 05524b8f659e7bfe5756d1335fec24ba Vuforia.UnityExtensions.dll:Vuforia.WireframeTrackableEventHandler
 15bea26698002c6c4a3087131232ce5c Vuforia.UnityExtensions.dll:Vuforia.WordBehaviour
 >>>>>>> fe2d3d887c8d49e60b525e37a9824228a2de5123
+=======
+>>>>>>> parent of 1bdab23a... added game over info
 =======
 >>>>>>> parent of 1bdab23a... added game over info
 34e025057ef78b1bf238460cdf6583a3 Assembly-CSharp-firstpass.dll:TMPro.Examples.ObjectSpin
