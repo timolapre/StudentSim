@@ -41,7 +41,11 @@ public class SetHighscores : MonoBehaviour {
         do
         {
             Text = Reader.ReadLine();
-            Loaded = Text.Split(':');
+            try
+            {
+                Loaded = Text.Split(':');
+            }
+            catch { }
             Field = Instantiate(TextField, new Vector3(0,0,0), transform.rotation);
             Text TheText = Field.transform.GetComponent<Text>();
             TheText.text = Loaded[0] + "    " + Loaded[1];
