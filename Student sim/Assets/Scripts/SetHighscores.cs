@@ -37,7 +37,6 @@ public class SetHighscores : MonoBehaviour {
 
     public void ReadDB()
     {
-        List<string> HSlist = new List<string>();
         StreamReader Reader = new StreamReader(@"C:assets\Highscores", true);
         do
         {
