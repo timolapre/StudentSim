@@ -19,7 +19,6 @@ public class Spawner : MonoBehaviour
     public static int FloorSpawnID, SpawnAction;
     private int QuestionCount, RandomObj;
     public static bool Question;
-    private Vector3 QuestionPos;
     private bool SpawnLevel = true;
 
     GameObject Rotater;
@@ -61,7 +60,6 @@ public class Spawner : MonoBehaviour
 
         if (Question)
         {
-            int dist = FloorSpawnID;
             //Debug.Log(QuestionPosZ + " " + player.transform.position.z + Multiplier * ShowQuestionAfterDistance);
             if (QuestionPosZ - Multiplier * ShowQuestionAfterDistance < player.transform.position.z)
             {
@@ -136,7 +134,6 @@ public class Spawner : MonoBehaviour
         if (QuestionCount >= QuestionAfter && FloorSpawnID >= RenderDistance)
         {
             Question = true;
-            QuestionPos = transform.position;
             QuestionPosZ = FloorSpawnID * Multiplier;
 
             for (int i = 0; i < 5; i++)

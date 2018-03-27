@@ -37,19 +37,15 @@ public class SetHighscores : MonoBehaviour {
 
     public void ReadDB()
     {
-        StreamReader Reader = new StreamReader(@"C:assets\Highscores", true);
+        StreamReader Reader = new StreamReader(@"assets\Highscores", true);
         do
         {
             Text = Reader.ReadLine();
-            try
-            {
-                Loaded = Text.Split(':');
-            }
-            catch { }
+            Loaded = Text.Split(':');
             Field = Instantiate(TextField, new Vector3(0,0,0), transform.rotation);
             Text TheText = Field.transform.GetComponent<Text>();
             TheText.text = Loaded[0] + "    " + Loaded[1];
-            Field.transform.parent = Highscores.transform;
+            Field.transform.SetParent(Highscores.transform,false);
             Field.transform.localScale = new Vector3(1, 1, 1);
             Field.transform.localPosition = new Vector3(0, 100 - 23 * j, 0);
             j++;

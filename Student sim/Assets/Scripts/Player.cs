@@ -28,7 +28,6 @@ public class Player : MonoBehaviour {
     Spawner spawner;
 
     Animator Anim;
-    int JumpHash = Animator.StringToHash("jump-up");
 
     public AudioClip Pickup;
     public AudioSource Source;

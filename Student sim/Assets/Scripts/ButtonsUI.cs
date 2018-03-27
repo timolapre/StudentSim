@@ -10,7 +10,7 @@ public class ButtonsUI : MonoBehaviour {
     public void ChangeScene(string scene)
     {
 
-        if (Video.PlayVideo == 0 && transform.name == "PlayButton")
+        if (transform.name == "PlayButton")
         {
             vplayer.Playvideo();
         }

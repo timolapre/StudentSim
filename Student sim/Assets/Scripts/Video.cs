@@ -25,7 +25,7 @@ public class Video : MonoBehaviour {
     {
         transform.position = new Vector3(0,1,-7);
         GetComponent<VideoPlayer>().Play();
-        Invoke("ChangeScene", 38);
+        Invoke("ChangeScene", 73);
     }
 
     private void ChangeScene()
