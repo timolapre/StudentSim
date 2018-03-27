@@ -104,16 +104,18 @@ public class Player : MonoBehaviour {
             Vector3 ppos = transform.position;
             transform.position = ppos;
         }
-
-        if ((Swipe() == "Right" || KeyPressed("Right")) && Pos < 1)
+        if (Rotating == 0)
         {
-            Pos++;
-            MoveTime = 0;
-        }
-        else if ((Swipe() == "Left" || KeyPressed("Left")) && Pos > -1)
-        {
-            Pos--;
-            MoveTime = 0;
+            if ((Swipe() == "Right" || KeyPressed("Right")) && Pos < 1)
+            {
+                Pos++;
+                MoveTime = 0;
+            }
+            else if ((Swipe() == "Left" || KeyPressed("Left")) && Pos > -1)
+            {
+                Pos--;
+                MoveTime = 0;
+            }
         }
 
         if ((Swipe() == "Jump" || KeyPressed("Jump")) && OnFloor)

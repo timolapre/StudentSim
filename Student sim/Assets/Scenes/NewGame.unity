@@ -1975,7 +1975,7 @@ MonoBehaviour:
   Study: 70
   Social: 70
   Sleep: 70
-  DecreaseSliderSpeed: 0.02
+  DecreaseSliderSpeed: 1.2
   StudySlider: {fileID: 243722518}
   SocialSlider: {fileID: 1767558734}
   SleepSlider: {fileID: 821545460}
