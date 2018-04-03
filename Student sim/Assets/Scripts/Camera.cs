@@ -14,8 +14,12 @@ public class Camera : MonoBehaviour {
     private VignetteModel.Settings SleepySettings;
     private MotionBlurModel.Settings DrunkSettingsBlur;
 
+    public Canvas CanvasDrunk, CanvasTired;
+
     // Use this for initialization
     void Start () {
+        CanvasDrunk.enabled = false;
+        CanvasTired.enabled = false;
         profile = GetComponent<PostProcessingBehaviour>().profile;
         SleepySettings = profile.vignette.settings;
         DrunkSettings = profile.depthOfField.settings;
@@ -34,10 +38,15 @@ public class Camera : MonoBehaviour {
 
         SleepySettings.intensity = Mathf.Max(player.Sleep*(-1)/50 + 1,0);
         profile.vignette.settings= SleepySettings;
+        if(player.Sleep < 20)
+            CanvasTired.enabled = true;
+        else
+            CanvasTired.enabled = false;
     }
 
     public void DrunkEffect(float time)
     {
+        CanvasDrunk.enabled = true;
         DrunkSettings.focalLength = 15;
         profile.depthOfField.settings= DrunkSettings;
         DrunkSettingsBlur.frameBlending = 32;
@@ -49,6 +58,7 @@ public class Camera : MonoBehaviour {
     IEnumerator WaitXSeconds(float time)
     {
         yield return new WaitForSeconds(time);
+        CanvasDrunk.enabled = false;
         DrunkSettings.focalLength = 1;
         profile.depthOfField.settings = DrunkSettings;
         DrunkSettingsBlur.frameBlending = 0;

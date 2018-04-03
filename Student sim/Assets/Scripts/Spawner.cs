@@ -29,6 +29,8 @@ public class Spawner : MonoBehaviour
     public TextMeshProUGUI QuestionText, Answer1Text, Answer2Text;
     public Questions[] questions;
 
+    public List<int> QuestionAsked;
+
     // Use this for initialization
     void Start()
     {
@@ -234,6 +236,12 @@ public class Spawner : MonoBehaviour
     void GetQuestionInfo()
     {
         WhatQuestion = Random.Range(0, questions.Length);
+        while (CheckIfQuestionAsked(WhatQuestion) == true)
+        {
+            Debug.Log("This question has been asked already");
+            WhatQuestion = Random.Range(0, questions.Length);
+        }
+        QuestionAsked.Add(WhatQuestion);
         InfoCount = questions[WhatQuestion].info.Length;
         InfoMult = InfoCount;
     }
@@ -252,5 +260,12 @@ public class Spawner : MonoBehaviour
             player.Social += questions[WhatQuestion].Changes[4];
             player.Sleep += questions[WhatQuestion].Changes[5];
         }
+    }
+
+    public bool CheckIfQuestionAsked(int i)
+    {
+        if (QuestionAsked.Count>0 && QuestionAsked.Contains(i))
+            return true;
+        return false;
     }
 }
