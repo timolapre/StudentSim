@@ -8,8 +8,8 @@ public class FloorAndHedgeSizer : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        spawner = GameObject.FindGameObjectWithTag("Spawner").GetComponent<Spawner>();
-        transform.localScale = new Vector3(transform.localScale.x, transform.localScale.y, spawner.Multiplier);
+        //spawner = GameObject.FindGameObjectWithTag("Spawner").GetComponent<Spawner>();
+        //transform.localScale = new Vector3(transform.localScale.x, transform.localScale.y, spawner.Multiplier);
     }
 	
 	// Update is called once per frame

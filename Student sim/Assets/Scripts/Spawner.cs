@@ -6,7 +6,6 @@ using UnityEngine.UI;
 
 public class Spawner : MonoBehaviour
 {
-
     public static int QuestionPosZ = 1000;
 
     public int Multiplier = 5, RenderDistance = 10, QuestionAfter = 20, ShowQuestionAfterDistance = 5, InfoEvery = 5;
@@ -80,11 +79,13 @@ public class Spawner : MonoBehaviour
             GameObject tempedge3 = Instantiate(Hedge, new Vector3(0, 0, FloorSpawnID * Multiplier), transform.rotation, Rotater.transform) as GameObject;
             tempedge3.transform.Translate(Multiplier, 2, -3);
             tempedge3.transform.eulerAngles = new Vector3(tempedge3.transform.eulerAngles.z, tempedge3.transform.eulerAngles.y + 90, tempedge3.transform.eulerAngles.z);
-            for (int i = 0; i < RenderDistance - 2; i++)
+            for (int i = 0; i < RenderDistance - 1; i++)
             {
                 GameObject tempfloor = Instantiate(Floor, new Vector3(0, 0, FloorSpawnID * Multiplier), transform.rotation, Rotater.transform) as GameObject;
                 tempfloor.transform.Translate((i + 2) * Multiplier, 0, 0);
                 tempfloor.transform.eulerAngles = new Vector3(tempfloor.transform.eulerAngles.z, tempfloor.transform.eulerAngles.y + 90, tempfloor.transform.eulerAngles.z);
+                if(i==RenderDistance - 2)
+                    tempfloor.transform.Translate(0, -0.01f, 0);
                 GameObject tempedge = Instantiate(Hedge, new Vector3(0, 0, FloorSpawnID * Multiplier), transform.rotation, Rotater.transform) as GameObject;
                 tempedge.transform.Translate((i + 2) * Multiplier, 2, 3);
                 tempedge.transform.eulerAngles = new Vector3(tempedge.transform.eulerAngles.z, tempedge.transform.eulerAngles.y + 90, tempedge.transform.eulerAngles.z);
@@ -109,11 +110,13 @@ public class Spawner : MonoBehaviour
             GameObject tempedge3 = Instantiate(Hedge, new Vector3(0, 0, FloorSpawnID * Multiplier), transform.rotation, Rotater.transform) as GameObject;
             tempedge3.transform.Translate(-Multiplier, 2, -3);
             tempedge3.transform.eulerAngles = new Vector3(tempedge3.transform.eulerAngles.z, tempedge3.transform.eulerAngles.y + 90, tempedge3.transform.eulerAngles.z);
-            for (int i = 0; i < RenderDistance - 2; i++)
+            for (int i = 0; i < RenderDistance - 1; i++)
             {
                 GameObject tempfloor = Instantiate(Floor, new Vector3(0, 0, FloorSpawnID * Multiplier), transform.rotation, Rotater.transform) as GameObject;
                 tempfloor.transform.Translate((-2 - i) * Multiplier, 0, 0);
                 tempfloor.transform.eulerAngles = new Vector3(tempfloor.transform.eulerAngles.z, tempfloor.transform.eulerAngles.y + 90, tempfloor.transform.eulerAngles.z);
+                if (i == RenderDistance - 2)
+                    tempfloor.transform.Translate(0, -0.01f, 0);
                 GameObject tempedge = Instantiate(Hedge, new Vector3(0, 0, FloorSpawnID * Multiplier), transform.rotation, Rotater.transform) as GameObject;
                 tempedge.transform.Translate((-2 - i) * Multiplier, 2, 3);
                 tempedge.transform.eulerAngles = new Vector3(tempedge.transform.eulerAngles.z, tempedge.transform.eulerAngles.y + 90, tempedge.transform.eulerAngles.z);
