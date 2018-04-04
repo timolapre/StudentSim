@@ -73,11 +73,13 @@ public class Player : MonoBehaviour {
                 if (Years == 3)
                 {
                     HighScore.HighScoreCheck(Score, 2, Study, Social, Sleep);
+                    PlayerPrefs.SetInt("Score", Score);
                 }    
                 else
                     HighScore.HighScoreCheck(Score, 1, Study, Social, Sleep);
 
                 GameOverBecause = "nochoice";
+                PlayerPrefs.SetInt("Score", Score);
                 SceneManager.LoadScene("Game Over", LoadSceneMode.Single);
             }
             Pos = 0;
@@ -93,7 +95,7 @@ public class Player : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.M))
             Score = 1008;
 
-        ScoreManager();
+        ScoreManager(false);
 
         if (Rotating == 0)
         {
@@ -156,7 +158,7 @@ public class Player : MonoBehaviour {
                     GameOverBecause = "social";
                 else if (Sleep <= 0)
                     GameOverBecause = "sleep";
-
+                PlayerPrefs.SetInt("Score", Score);
                 SceneManager.LoadScene("Game Over", LoadSceneMode.Single);
             }
         }
@@ -238,13 +240,23 @@ public class Player : MonoBehaviour {
         BarColors(SleepSlider, Sleep);
     }
 
-    void ScoreManager()
+    void ScoreManager(bool SetScore)
     {
-        Years = Score / (28 * 12);
-        Months = (Score - Years * (28*12)) / 28;
-        Weeks = (Score - Months*28 - Years * (28 * 12)) / 7;
-        Days = Score - Weeks * 7 - Months * 28 - Years * (28 * 12);
-        ScoreText.text = "Years: " + Years + " Months: " + Months + " Weeks: " + Weeks + " Days: " + Days;
+        if (SetScore == true)
+        {
+            PlayerPrefs.SetInt("Years", Years);
+            PlayerPrefs.SetInt("Months", Months);
+            PlayerPrefs.SetInt("Weeks", Weeks);
+            PlayerPrefs.SetInt("Days", Days);
+        }
+        else
+        {
+            Years = Score / (28 * 12);
+            Months = (Score - Years * (28 * 12)) / 28;
+            Weeks = (Score - Months * 28 - Years * (28 * 12)) / 7;
+            Days = Score - Weeks * 7 - Months * 28 - Years * (28 * 12);
+            ScoreText.text = "Years: " + Years + " Months: " + Months + " Weeks: " + Weeks + " Days: " + Days;
+        }
     }
 
     void QuestionToFalse()
