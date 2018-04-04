@@ -380,6 +380,7 @@
     <Compile Include="Assets\Scripts\Scroller.cs" />
     <Compile Include="Assets\Scripts\SetHighscores.cs" />
     <Compile Include="Assets\Scripts\Spawner.cs" />
+    <Compile Include="Assets\Scripts\TextforPROS.cs" />
     <Compile Include="Assets\Scripts\Video.cs" />
   </ItemGroup>
   <ItemGroup>
