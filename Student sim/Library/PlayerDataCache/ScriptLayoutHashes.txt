@@ -198,7 +198,7 @@ a8ed45ab553b07236625df6cc6ac449c TextMeshPro-2017.3-1.0.56-Editor.dll:TMPro.Edit
 32e8fe00b63ed946490b898f6024a2f2 Facebook.Unity.Settings.dll:Facebook.Unity.Settings.FacebookSettings
 76015de5fcb247eeb8df66c001d5a22d Assembly-CSharp-firstpass.dll:TMPro.Examples.TMP_FrameRateCounter
 b8f04bdad423045528c67dfa4c3dca0d Assembly-CSharp-firstpass.dll:TMPro.Examples.VertexShakeA
-6c74b518707186d3cd81c194a90ce4ac Assembly-CSharp.dll:.Camera
+8f23233eadb40cb57a075f44b1da5495 Assembly-CSharp.dll:.Camera
 fc1e0f4d8439d9928083474691511a13 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkAnimator
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Networking.dll:UnityEngine.Networking.NetworkBehaviour
 60b2bb652410a5867a5ab9a01cd38461 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkDiscovery
@@ -236,7 +236,7 @@ f671a42aea5f34fec6a4450a3668c615 Assembly-CSharp.dll:UnityEngine.PostProcessing.
 48a9dee325686d1924a2646b71c83f08 Assembly-CSharp-firstpass.dll:TMPro.Examples.Benchmark01
 9de3a22eca9aefadba2d10d5987cefe3 UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.LightMovement
-39216b7ba2251c28ae88683d25a5e377 Assembly-CSharp.dll:.Spawner
+d231ae0e08942e5c4e42074c1c94d228 Assembly-CSharp.dll:.Spawner
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.FloorAndHedgeSizer
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp-firstpass.dll:TMPro.Examples.TextConsoleSimulator
 7cdcb09fd7cdfdef1a2a37d773161338 Assembly-CSharp.dll:.ButtonsUI
